@@ -56,6 +56,90 @@
         "overlay_opacity": 0
       }
     },
+    "logo_list_cjYzLx": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_Bghjbf": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Dezeen_logo_svg.png",
+            "logo_width": 300,
+            "link": ""
+          }
+        },
+        "logo_jdDiF7": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Architectural-Digest-Logo-PNG-Images-HD-thumb.png",
+            "logo_width": 150,
+            "link": ""
+          }
+        },
+        "logo_UVWEa8": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Wallpaper_magazine_logo__2009__svg.png",
+            "logo_width": 300,
+            "link": ""
+          }
+        },
+        "logo_paTtwV": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/IDEAT-Magazin-Germany-1024x381.png",
+            "logo_width": 300,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_Bghjbf",
+        "logo_jdDiF7",
+        "logo_UVWEa8",
+        "logo_paTtwV"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "title": "Logo list",
+        "content": "",
+        "text_alignment": "center",
+        "items_per_row": 5,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "#f1ece6",
+        "logo_item_border": ""
+      }
+    },
+    "before_after_image_yELDEC": {
+      "type": "before-after-image",
+      "name": "Before/after image",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Avant & Après",
+        "content": "",
+        "before_image": "shopify://shop_images/Lampe_chaleureuse_et_signe_HOME_rustique.png",
+        "after_image": "shopify://shop_images/da15941b-ac31-4d22-8d9c-099473b08a13.png",
+        "expand_image": false,
+        "text_position": "center",
+        "before_after_text_position": "top",
+        "before_text": "Avant",
+        "after_text": "Après",
+        "drag_initial_position": 50,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "before_text_color": "#ffffff",
+        "after_text_color": "#ffffff",
+        "drag_cursor_background": "#ffffff",
+        "drag_cursor_color": "#000000"
+      }
+    },
     "featured-product": {
       "type": "featured-product",
       "blocks": {
@@ -153,145 +237,12 @@
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
       }
-    },
-    "faq": {
-      "type": "faq",
-      "blocks": {
-        "166442457738b23caf-0": {
-          "type": "item",
-          "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
-          }
-        },
-        "166442457738b23caf-1": {
-          "type": "item",
-          "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
-          }
-        },
-        "166442457738b23caf-2": {
-          "type": "item",
-          "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "166442457738b23caf-0",
-        "166442457738b23caf-1",
-        "166442457738b23caf-2"
-      ],
-      "settings": {
-        "full_width": false,
-        "subheading": "",
-        "title": "FAQ",
-        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
-        "team_avatar_width": 160,
-        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
-        "answer_time": "Average answer time: 24h",
-        "button_text": "",
-        "button_url": "",
-        "text_position": "start",
-        "background": "#f1ece6",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "button_background": "",
-        "button_text_color": "",
-        "accordion_background": "",
-        "accordion_text_color": ""
-      }
-    },
-    "logo_list_cjYzLx": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_Bghjbf": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        },
-        "logo_jdDiF7": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        },
-        "logo_UVWEa8": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        },
-        "logo_paTtwV": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_Bghjbf",
-        "logo_jdDiF7",
-        "logo_UVWEa8",
-        "logo_paTtwV"
-      ],
-      "name": "Logo list",
-      "settings": {
-        "full_width": true,
-        "stack_mobile": true,
-        "title": "Logo list",
-        "content": "",
-        "text_alignment": "center",
-        "items_per_row": 5,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "logo_item_background": "",
-        "logo_item_border": ""
-      }
-    },
-    "before_after_image_yELDEC": {
-      "type": "before-after-image",
-      "name": "Before/after image",
-      "settings": {
-        "full_width": true,
-        "subheading": "",
-        "title": "Avant & Après",
-        "content": "",
-        "before_image": "shopify://shop_images/Lampe_chaleureuse_et_signe_HOME_rustique.png",
-        "after_image": "shopify://shop_images/da15941b-ac31-4d22-8d9c-099473b08a13.png",
-        "expand_image": false,
-        "text_position": "center",
-        "before_after_text_position": "top",
-        "before_text": "Avant",
-        "after_text": "Après",
-        "drag_initial_position": 50,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "before_text_color": "#ffffff",
-        "after_text_color": "#ffffff",
-        "drag_cursor_background": "#ffffff",
-        "drag_cursor_color": "#000000"
-      }
     }
   },
   "order": [
     "image-with-text-overlay",
-    "featured-product",
-    "faq",
     "logo_list_cjYzLx",
-    "before_after_image_yELDEC"
+    "before_after_image_yELDEC",
+    "featured-product"
   ]
 }
