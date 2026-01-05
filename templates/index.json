@@ -56,28 +56,6 @@
         "overlay_opacity": 0
       }
     },
-    "before-after-image": {
-      "type": "before-after-image",
-      "settings": {
-        "full_width": true,
-        "subheading": "",
-        "title": "Before/after",
-        "content": "<p>Showcase your product benefit by using before/after image comparison.</p>",
-        "expand_image": false,
-        "text_position": "center",
-        "before_after_text_position": "bottom",
-        "before_text": "Before",
-        "after_text": "After",
-        "drag_initial_position": 50,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "before_text_color": "#ffffff",
-        "after_text_color": "#ffffff",
-        "drag_cursor_background": "#ffffff",
-        "drag_cursor_color": "#000000"
-      }
-    },
     "featured-product": {
       "type": "featured-product",
       "blocks": {
@@ -282,13 +260,38 @@
         "logo_item_background": "",
         "logo_item_border": ""
       }
+    },
+    "before_after_image_yELDEC": {
+      "type": "before-after-image",
+      "name": "Before/after image",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Before/after",
+        "content": "",
+        "before_image": "shopify://shop_images/Lampe_chaleureuse_et_signe_HOME_rustique.png",
+        "after_image": "shopify://shop_images/da15941b-ac31-4d22-8d9c-099473b08a13.png",
+        "expand_image": false,
+        "text_position": "center",
+        "before_after_text_position": "top",
+        "before_text": "Before",
+        "after_text": "After",
+        "drag_initial_position": 50,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "before_text_color": "#ffffff",
+        "after_text_color": "#ffffff",
+        "drag_cursor_background": "#ffffff",
+        "drag_cursor_color": "#000000"
+      }
     }
   },
   "order": [
     "image-with-text-overlay",
-    "before-after-image",
     "featured-product",
     "faq",
-    "logo_list_cjYzLx"
+    "logo_list_cjYzLx",
+    "before_after_image_yELDEC"
   ]
 }
