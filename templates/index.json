@@ -63,7 +63,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/Dezeen_logo_svg.png",
-            "logo_width": 300,
+            "logo_width": 200,
             "link": ""
           }
         },
@@ -71,7 +71,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/Architectural-Digest-Logo-PNG-Images-HD-thumb.png",
-            "logo_width": 150,
+            "logo_width": 130,
             "link": ""
           }
         },
@@ -87,7 +87,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/IDEAT-Magazin-Germany-1024x381.png",
-            "logo_width": 300,
+            "logo_width": 250,
             "link": ""
           }
         }
@@ -101,11 +101,11 @@
       "name": "Logo list",
       "settings": {
         "full_width": true,
-        "stack_mobile": true,
-        "title": "Logo list",
+        "stack_mobile": false,
+        "title": "",
         "content": "",
         "text_alignment": "center",
-        "items_per_row": 5,
+        "items_per_row": 4,
         "background": "",
         "background_gradient": "",
         "text_color": "",
