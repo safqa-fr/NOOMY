@@ -22,7 +22,7 @@
         "1664424230c4756b0e-2": {
           "type": "richtext",
           "settings": {
-            "content": "<h4>Pour se détendre, s’apaiser et mieux dormir</h4>"
+            "content": "<h5>Pour se détendre, s’apaiser et mieux dormir</h5>"
           }
         },
         "button_KQDUwK": {
@@ -53,7 +53,7 @@
         "desktop_text_position": "sm:place-self-center-end sm:text-end",
         "text_color": "#ffffff",
         "overlay_color": "#000000",
-        "overlay_opacity": 10
+        "overlay_opacity": 0
       }
     },
     "media-grid": {
