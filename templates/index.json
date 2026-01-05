@@ -16,13 +16,13 @@
           "type": "heading",
           "settings": {
             "text": "Une lumière douce pour des nuits paisibles",
-            "heading_tag": "h3"
+            "heading_tag": "h1"
           }
         },
         "1664424230c4756b0e-2": {
           "type": "richtext",
           "settings": {
-            "content": "<h6>Pour se détendre, s’apaiser et mieux dormir</h6>"
+            "content": "<h4>Pour se détendre, s’apaiser et mieux dormir</h4>"
           }
         },
         "button_KQDUwK": {
