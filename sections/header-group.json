@@ -29,7 +29,7 @@
         "enable_sticky": false,
         "autoplay": false,
         "cycle_speed": 6,
-        "text_size": "text-base",
+        "text_size": "text-xs",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
         "background": "#4a1a08",
