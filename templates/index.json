@@ -115,6 +115,49 @@
         "logo_item_border": ""
       }
     },
+    "multiple_images_with_text_F8yHeW": {
+      "type": "multiple-images-with-text",
+      "blocks": {
+        "item_DQ3aUG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_5_janv._2026_23_23_52.png",
+            "image_rotation_degrees": -2,
+            "subheading": "",
+            "title": "",
+            "content": "<p><strong>Un calme immédiat, sans effort</strong><br/>Dès que Noomy s’allume, l’ambiance change. La pièce devient plus douce, plus calme, et l’esprit se relâche naturellement.</p><p><br/><strong>Des soirées plus sereines, chaque jour</strong><br/>Noomy transforme vos fins de journée en vrais moments de déconnexion, loin du stress et de l’agitation.</p><p><br/><strong>Un rituel qui aide à mieux dormir</strong><br/>La lumière apaisante prépare le corps au repos et facilite l’endormissement, sans forcer, sans contrainte.</p>",
+            "button_url": "",
+            "button_text": ""
+          }
+        },
+        "item_pBk3VL": {
+          "type": "item",
+          "settings": {
+            "image_rotation_degrees": 1.5,
+            "subheading": "",
+            "title": "",
+            "content": "<p><strong>Une ambiance réconfortante, partout chez vous</strong><br/>Noomy s’adapte à votre quotidien et vous suit là où vous avez besoin de calme : chambre, salon, coin lecture.</p><p><strong>Zéro complication, 100 % plaisir</strong><br/>Pas besoin de réfléchir, de régler ou d’apprendre. Noomy s’utilise instinctivement et devient un réflexe du soir.<br/></p><p><strong>Se sentir bien chez soi, tout simplement</strong><br/>Noomy apporte cette sensation précieuse de confort, de sécurité et de bien-être qui donne envie de ralentir et de profiter.</p>",
+            "button_url": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_DQ3aUG",
+        "item_pBk3VL"
+      ],
+      "name": "Multiple images with text",
+      "settings": {
+        "full_width": true,
+        "images_layout": "stacked",
+        "collage_images_alignment": "middle",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    },
     "before_after_image_yELDEC": {
       "type": "before-after-image",
       "name": "Before/after image",
@@ -237,12 +280,147 @@
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
       }
+    },
+    "tabs_84b7FE": {
+      "type": "tabs",
+      "blocks": {
+        "tab_AJqQmm": {
+          "type": "tab",
+          "settings": {
+            "title": "Tab",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "page": ""
+          }
+        },
+        "tab_GhR6nB": {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 1",
+            "content": "",
+            "page": ""
+          }
+        },
+        "tab_8AJYz6": {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 2",
+            "content": "<p>Describe a product, share announcements, or welcome customers to your store.</p>",
+            "page": ""
+          }
+        },
+        "tab_bq4KUR": {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 3",
+            "content": "<p>Share information about your shipping rates, return policy or contact information.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_AJqQmm",
+        "tab_GhR6nB",
+        "tab_8AJYz6",
+        "tab_bq4KUR"
+      ],
+      "name": "Tabs",
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "subheading": "Subheading",
+        "title": "Heading",
+        "text_alignment": "center",
+        "first_tab_open": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "faq_QthU3k": {
+      "type": "faq",
+      "blocks": {
+        "item_tgqVAa": {
+          "type": "item",
+          "settings": {
+            "title": "Do you ship overseas?",
+            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+          }
+        },
+        "item_zDDHzW": {
+          "type": "item",
+          "settings": {
+            "title": "How long will it take to get my orders?",
+            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+          }
+        },
+        "item_ejNWDp": {
+          "type": "item",
+          "settings": {
+            "title": "Any question?",
+            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_tgqVAa",
+        "item_zDDHzW",
+        "item_ejNWDp"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "team_avatar_width": 160,
+        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
+        "answer_time": "Average answer time: 24h",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
+    },
+    "contact_enin38": {
+      "type": "contact",
+      "name": "Contact form",
+      "settings": {
+        "full_width": true,
+        "subheading": "Contact Us",
+        "title": "Do you have any question?",
+        "content": "",
+        "text_position": "start",
+        "contact_form_size": "large",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "contact_background": "",
+        "contact_text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
     }
   },
   "order": [
     "image-with-text-overlay",
     "logo_list_cjYzLx",
+    "multiple_images_with_text_F8yHeW",
     "before_after_image_yELDEC",
-    "featured-product"
+    "featured-product",
+    "tabs_84b7FE",
+    "faq_QthU3k",
+    "contact_enin38"
   ]
 }
