@@ -115,6 +115,46 @@
         "logo_item_border": ""
       }
     },
+    "rich_text_XD6a6n": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_bRJh84": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_dAc8Yt": {
+          "type": "heading",
+          "settings": {
+            "text": "Pourquoi choisir Noomy ?",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_eYWRG6": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_bRJh84",
+        "heading_dAc8Yt",
+        "richtext_eYWRG6"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "multiple_images_with_text_F8yHeW": {
       "type": "multiple-images-with-text",
       "blocks": {
@@ -416,6 +456,7 @@
   "order": [
     "image-with-text-overlay",
     "logo_list_cjYzLx",
+    "rich_text_XD6a6n",
     "multiple_images_with_text_F8yHeW",
     "before_after_image_yELDEC",
     "featured-product",
