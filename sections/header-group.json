@@ -14,16 +14,32 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "message_PViBAt": {
+          "type": "message",
+          "settings": {
+            "text": "Garantie de remboursement de 30 jours",
+            "url": ""
+          }
+        },
         "message": {
           "type": "message",
           "settings": {
-            "text": "Announce something here",
+            "text": "Livraison gratuite",
+            "url": ""
+          }
+        },
+        "message_xeKhAc": {
+          "type": "message",
+          "settings": {
+            "text": "Soldes – -50 % sur Noomy, offre limitée",
             "url": ""
           }
         }
       },
       "block_order": [
-        "message"
+        "message_PViBAt",
+        "message",
+        "message_xeKhAc"
       ],
       "settings": {
         "enable_sticky": false,
