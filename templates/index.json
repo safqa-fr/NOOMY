@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "text": "Une lumière douce pour des nuits paisibles",
-            "heading_tag": "h1"
+            "heading_tag": "h2"
           }
         },
         "1664424230c4756b0e-2": {
@@ -63,7 +63,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/Dezeen_logo_svg.png",
-            "logo_width": 150,
+            "logo_width": 120,
             "link": ""
           }
         },
@@ -71,7 +71,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/Architectural-Digest-Logo-PNG-Images-HD-thumb.png",
-            "logo_width": 100,
+            "logo_width": 90,
             "link": ""
           }
         },
@@ -79,7 +79,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/Wallpaper_magazine_logo__2009__svg.png",
-            "logo_width": 250,
+            "logo_width": 230,
             "link": ""
           }
         },
@@ -87,7 +87,7 @@
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/IDEAT-Magazin-Germany-1024x381.png",
-            "logo_width": 200,
+            "logo_width": 180,
             "link": ""
           }
         }
