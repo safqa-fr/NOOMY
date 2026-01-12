@@ -64,38 +64,18 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ChatGPT_Image_6_janv._2026_01_04_56.png",
-            "mobile_image": "shopify://shop_images/ChatGPT_Image_6_janv._2026_01_13_20.png",
+            "mobile_image": "shopify://shop_images/4bc8a255-7686-46c7-b981-e7aa61c1f442.png",
             "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-center-end sm:text-end",
             "subheading": "",
-            "title": "Slide 1",
-            "heading_tag": "h0",
-            "button_text": "",
+            "title": "Une lumière douce pour des nuits paisibles",
+            "heading_tag": "h1",
+            "button_text": "Découvrir NOOMY",
             "button_link": "",
             "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30,
-            "background": "",
-            "background_gradient": ""
-          }
-        },
-        "image_7Mk9RP": {
-          "type": "image",
-          "settings": {
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "Tell your story",
-            "title": "Slide 2",
-            "heading_tag": "h0",
-            "button_text": "",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
+            "button_background": "#cb8838",
+            "button_text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 30,
             "background": "",
@@ -104,8 +84,7 @@
         }
       },
       "block_order": [
-        "image_ECN6cE",
-        "image_7Mk9RP"
+        "image_ECN6cE"
       ],
       "name": "Slideshow",
       "settings": {
