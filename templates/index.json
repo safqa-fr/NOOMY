@@ -42,7 +42,6 @@
         "1664424230c4756b0e-2",
         "button_KQDUwK"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "allow_transparent_header": false,
@@ -86,6 +85,7 @@
       "block_order": [
         "image_ECN6cE"
       ],
+      "disabled": true,
       "name": "Slideshow",
       "settings": {
         "full_width": true,
