@@ -244,11 +244,9 @@
       "name": "Before/after image",
       "settings": {
         "full_width": true,
-        "subheading": "",
-        "title": "Avant & Après",
+        "subheading": "TEXTE",
+        "title": "TEXTE",
         "content": "",
-        "before_image": "shopify://shop_images/Lampe_chaleureuse_et_signe_HOME_rustique.png",
-        "after_image": "shopify://shop_images/da15941b-ac31-4d22-8d9c-099473b08a13.png",
         "expand_image": false,
         "text_position": "center",
         "before_after_text_position": "top",
