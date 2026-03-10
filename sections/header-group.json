@@ -56,8 +56,8 @@
     "header": {
       "type": "header",
       "settings": {
-        "enable_sticky": false,
-        "hide_on_scroll": false,
+        "enable_sticky": true,
+        "hide_on_scroll": true,
         "logo_max_width": 120,
         "logo_mobile_max_width": 100,
         "menu": "main-menu",
@@ -72,7 +72,6 @@
         "show_country_flag": true,
         "show_country_name": false,
         "transparent_header_text_color": "#ffffff",
-        "transparent_logo": "shopify://shop_images/ChatGPT_Image_12_janv._2026_11_06_05.png",
         "reduce_padding": false,
         "background_opacity": 100,
         "background_blur_radius": 0
