@@ -204,9 +204,9 @@
           "type": "item",
           "settings": {
             "image_rotation_degrees": -2,
-            "subheading": "",
-            "title": "",
-            "content": "",
+            "subheading": "TEXTE",
+            "title": "TEXTE",
+            "content": "<p><br/>TEXTE<br/><br/></p>",
             "button_url": "",
             "button_text": ""
           }
