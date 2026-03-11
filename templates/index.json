@@ -16,7 +16,7 @@
           "type": "heading",
           "disabled": true,
           "settings": {
-            "text": "",
+            "text": "Wake Up. Every Time.",
             "heading_tag": "h2"
           }
         },
@@ -24,7 +24,7 @@
           "type": "richtext",
           "disabled": true,
           "settings": {
-            "content": "<h4>Pour se détendre, s’apaiser et mieux dormir</h4>"
+            "content": "<p>Finally, an alarm that works as hard as you do — silent vibration directly on your wrist</p>"
           }
         },
         "button_KQDUwK": {
