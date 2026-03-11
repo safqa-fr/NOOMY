@@ -218,6 +218,22 @@
         "text_color": ""
       }
     },
+    "image_with_text_overlay_PbAnNe": {
+      "type": "image-with-text-overlay",
+      "name": "Image with text overlay",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/Gemini_Generated_Image_aj4bgqaj4bgqaj4b.png",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
     "multiple_images_with_text_F8yHeW": {
       "type": "multiple-images-with-text",
       "blocks": {
@@ -258,29 +274,6 @@
         "text_color": "",
         "button_background": "",
         "button_text_color": ""
-      }
-    },
-    "before_after_image_yELDEC": {
-      "type": "before-after-image",
-      "name": "Before/after image",
-      "settings": {
-        "full_width": true,
-        "subheading": "TEXTE",
-        "title": "TEXTE",
-        "content": "",
-        "expand_image": false,
-        "text_position": "center",
-        "before_after_text_position": "top",
-        "before_text": "Avant",
-        "after_text": "Après",
-        "drag_initial_position": 50,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "before_text_color": "#ffffff",
-        "after_text_color": "#ffffff",
-        "drag_cursor_background": "#ffffff",
-        "drag_cursor_color": "#000000"
       }
     },
     "featured-product": {
@@ -379,6 +372,29 @@
         "text_color": "",
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
+      }
+    },
+    "before_after_image_yELDEC": {
+      "type": "before-after-image",
+      "name": "Before/after image",
+      "settings": {
+        "full_width": true,
+        "subheading": "TEXTE",
+        "title": "TEXTE",
+        "content": "",
+        "expand_image": false,
+        "text_position": "center",
+        "before_after_text_position": "top",
+        "before_text": "Avant",
+        "after_text": "Après",
+        "drag_initial_position": 50,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "before_text_color": "#ffffff",
+        "after_text_color": "#ffffff",
+        "drag_cursor_background": "#ffffff",
+        "drag_cursor_color": "#000000"
       }
     },
     "tabs_84b7FE": {
@@ -526,9 +542,10 @@
     "slideshow_4NRtVF",
     "logo_list_cjYzLx",
     "rich_text_XD6a6n",
+    "image_with_text_overlay_PbAnNe",
     "multiple_images_with_text_F8yHeW",
-    "before_after_image_yELDEC",
     "featured-product",
+    "before_after_image_yELDEC",
     "tabs_84b7FE",
     "faq_QthU3k",
     "contact_enin38"
