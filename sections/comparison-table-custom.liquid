@@ -1,0 +1,883 @@
+{% assign section_id = section.id %}
+
+<section class="comparison-table comparison-table--{{ section_id }}">
+  <div class="comparison-table__outer">
+    <div class="comparison-table__inner page-width">
+      <div class="comparison-table__grid">
+
+        <!-- Featured Column -->
+        <div class="comparison-table__column comparison-table__column--featured">
+          <div class="comparison-table__head comparison-table__head--featured">
+            {% if section.settings.featured_badge != blank %}
+              <div class="comparison-table__badge">
+                {{ section.settings.featured_badge }}
+              </div>
+            {% endif %}
+
+            {% if section.settings.featured_image != blank %}
+              <div class="comparison-table__image-box comparison-table__image-box--featured">
+                {{
+                  section.settings.featured_image
+                  | image_url: width: 500
+                  | image_tag:
+                    loading: 'lazy',
+                    class: 'comparison-table__image',
+                    alt: section.settings.featured_title
+                }}
+              </div>
+            {% endif %}
+
+            {% if section.settings.featured_title != blank %}
+              <h2 class="comparison-table__title comparison-table__title--featured">
+                {{ section.settings.featured_title }}
+              </h2>
+            {% endif %}
+          </div>
+
+          {% for block in section.blocks %}
+            {% if block.type == 'feature_row' %}
+              <div class="comparison-table__cell comparison-table__cell--featured" {{ block.shopify_attributes }}>
+                <div class="comparison-table__icon comparison-table__icon--featured">
+                  {% if block.settings.featured_has_check %}
+                    <span>✓</span>
+                  {% else %}
+                    <span>✕</span>
+                  {% endif %}
+                </div>
+                <div class="comparison-table__text comparison-table__text--featured">
+                  {{ block.settings.row_text }}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <!-- Column 2 -->
+        <div class="comparison-table__column comparison-table__column--dark">
+          <div class="comparison-table__head comparison-table__head--dark">
+            {% if section.settings.col2_image != blank %}
+              <div class="comparison-table__image-box comparison-table__image-box--dark">
+                {{
+                  section.settings.col2_image
+                  | image_url: width: 500
+                  | image_tag:
+                    loading: 'lazy',
+                    class: 'comparison-table__image',
+                    alt: section.settings.col2_title
+                }}
+              </div>
+            {% endif %}
+
+            {% if section.settings.col2_title != blank %}
+              <h2 class="comparison-table__title comparison-table__title--dark">
+                {{ section.settings.col2_title }}
+              </h2>
+            {% endif %}
+          </div>
+
+          {% for block in section.blocks %}
+            {% if block.type == 'feature_row' %}
+              <div class="comparison-table__cell comparison-table__cell--dark" {{ block.shopify_attributes }}>
+                {% if block.settings.col2_has_check %}
+                  <div class="comparison-table__icon comparison-table__icon--yes">
+                    <span>✓</span>
+                  </div>
+                {% else %}
+                  <div class="comparison-table__icon comparison-table__icon--no">
+                    <span>✕</span>
+                  </div>
+                {% endif %}
+                <div class="comparison-table__text comparison-table__text--dark">
+                  {{ block.settings.row_text }}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <!-- Column 3 -->
+        <div class="comparison-table__column comparison-table__column--dark">
+          <div class="comparison-table__head comparison-table__head--dark">
+            {% if section.settings.col3_image != blank %}
+              <div class="comparison-table__image-box comparison-table__image-box--dark">
+                {{
+                  section.settings.col3_image
+                  | image_url: width: 500
+                  | image_tag:
+                    loading: 'lazy',
+                    class: 'comparison-table__image',
+                    alt: section.settings.col3_title
+                }}
+              </div>
+            {% endif %}
+
+            {% if section.settings.col3_title != blank %}
+              <h2 class="comparison-table__title comparison-table__title--dark">
+                {{ section.settings.col3_title }}
+              </h2>
+            {% endif %}
+          </div>
+
+          {% for block in section.blocks %}
+            {% if block.type == 'feature_row' %}
+              <div class="comparison-table__cell comparison-table__cell--dark" {{ block.shopify_attributes }}>
+                {% if block.settings.col3_has_check %}
+                  <div class="comparison-table__icon comparison-table__icon--yes">
+                    <span>✓</span>
+                  </div>
+                {% else %}
+                  <div class="comparison-table__icon comparison-table__icon--no">
+                    <span>✕</span>
+                  </div>
+                {% endif %}
+                <div class="comparison-table__text comparison-table__text--dark">
+                  {{ block.settings.row_text }}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .comparison-table--{{ section_id }} {
+      background: {{ section.settings.section_background }};
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__outer {
+      background: {{ section.settings.outer_background }};
+      padding: {{ section.settings.outer_padding }}px;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-radius: {{ section.settings.table_radius }}px;
+      overflow: hidden;
+      border: 1px solid {{ section.settings.table_border_color }};
+      box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__column {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__column--featured {
+      background: {{ section.settings.featured_column_background }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__column--dark {
+      background: linear-gradient(180deg, {{ section.settings.dark_column_background_top }} 0%, {{ section.settings.dark_column_background_bottom }} 100%);
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__head {
+      min-height: 290px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 32px 18px 24px;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid {{ section.settings.row_border_color }};
+      border-right: 1px solid {{ section.settings.column_border_color }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__column:last-child .comparison-table__head {
+      border-right: none;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__head--featured {
+      background: {{ section.settings.featured_header_background }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__head--dark {
+      background: linear-gradient(180deg, {{ section.settings.dark_header_background_top }} 0%, {{ section.settings.dark_header_background_bottom }} 100%);
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: {{ section.settings.badge_background }};
+      color: {{ section.settings.badge_text_color }};
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__image-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      overflow: hidden;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__image-box--featured {
+      width: {{ section.settings.image_box_size_desktop }}px;
+      height: {{ section.settings.image_box_size_desktop }}px;
+      border-radius: {{ section.settings.image_box_radius }}px;
+      background: {{ section.settings.featured_image_box_background }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__image-box--dark {
+      width: {{ section.settings.image_box_size_desktop }}px;
+      height: {{ section.settings.image_box_size_desktop }}px;
+      border-radius: {{ section.settings.image_box_radius }}px;
+      background: {{ section.settings.dark_image_box_background }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__image {
+      max-width: 82%;
+      max-height: 82%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__title {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__title--featured {
+      color: {{ section.settings.featured_title_color }};
+      text-transform: uppercase;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__title--dark {
+      color: {{ section.settings.dark_title_color }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__cell {
+      min-height: 175px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 28px 18px;
+      text-align: center;
+      border-bottom: 1px solid {{ section.settings.row_border_color }};
+      border-right: 1px solid {{ section.settings.column_border_color }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__column:last-child .comparison-table__cell {
+      border-right: none;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__column .comparison-table__cell:last-child {
+      border-bottom: none;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__cell--featured {
+      background: {{ section.settings.featured_row_background }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__cell--dark {
+      background: linear-gradient(180deg, {{ section.settings.dark_row_background_top }} 0%, {{ section.settings.dark_row_background_bottom }} 100%);
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__icon {
+      width: {{ section.settings.icon_size_desktop }}px;
+      height: {{ section.settings.icon_size_desktop }}px;
+      min-width: {{ section.settings.icon_size_desktop }}px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__icon--featured {
+      background: {{ section.settings.featured_icon_background }};
+      color: {{ section.settings.featured_icon_color }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__icon--yes {
+      background: {{ section.settings.yes_icon_background }};
+      color: {{ section.settings.yes_icon_color }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__icon--no {
+      background: {{ section.settings.no_icon_background }};
+      color: {{ section.settings.no_icon_color }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__text {
+      max-width: 320px;
+      font-size: 20px;
+      line-height: 1.3;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__text--featured {
+      color: {{ section.settings.featured_text_color }};
+    }
+
+    .comparison-table--{{ section_id }} .comparison-table__text--dark {
+      color: {{ section.settings.dark_text_color }};
+    }
+
+    @media screen and (max-width: 990px) {
+      .comparison-table--{{ section_id }} .comparison-table__head {
+        min-height: 240px;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__cell {
+        min-height: 150px;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__title {
+        font-size: 22px;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__text {
+        font-size: 17px;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__image-box--featured,
+      .comparison-table--{{ section_id }} .comparison-table__image-box--dark {
+        width: {{ section.settings.image_box_size_tablet }}px;
+        height: {{ section.settings.image_box_size_tablet }}px;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__icon {
+        width: {{ section.settings.icon_size_tablet }}px;
+        height: {{ section.settings.icon_size_tablet }}px;
+        min-width: {{ section.settings.icon_size_tablet }}px;
+        font-size: 26px;
+      }
+    }
+
+    @media screen and (max-width: 749px) {
+      .comparison-table--{{ section_id }} .comparison-table__outer {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__grid {
+        grid-template-columns: 220px 220px 220px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__head {
+        min-height: 185px;
+        padding: 22px 12px 16px;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__cell {
+        min-height: 122px;
+        padding: 18px 10px;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__image-box--featured,
+      .comparison-table--{{ section_id }} .comparison-table__image-box--dark {
+        width: {{ section.settings.image_box_size_mobile }}px;
+        height: {{ section.settings.image_box_size_mobile }}px;
+        border-radius: {{ section.settings.image_box_radius_mobile }}px;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__title {
+        font-size: 16px;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__text {
+        font-size: 13px;
+        max-width: 180px;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__icon {
+        width: {{ section.settings.icon_size_mobile }}px;
+        height: {{ section.settings.icon_size_mobile }}px;
+        min-width: {{ section.settings.icon_size_mobile }}px;
+        font-size: 21px;
+        margin-bottom: 12px;
+      }
+
+      .comparison-table--{{ section_id }} .comparison-table__badge {
+        top: 10px;
+        right: 10px;
+        font-size: 11px;
+        padding: 8px 11px;
+        border-radius: 10px;
+      }
+    }
+  </style>
+</section>
+
+{% schema %}
+{
+  "name": "Comparison table custom",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "featured_image",
+      "label": "Featured image"
+    },
+    {
+      "type": "text",
+      "id": "featured_title",
+      "label": "Featured title",
+      "default": "FITSLEEPS"
+    },
+    {
+      "type": "text",
+      "id": "featured_badge",
+      "label": "Badge text",
+      "default": "BEST"
+    },
+    {
+      "type": "image_picker",
+      "id": "col2_image",
+      "label": "Column 2 image"
+    },
+    {
+      "type": "text",
+      "id": "col2_title",
+      "label": "Column 2 title",
+      "default": "Phone"
+    },
+    {
+      "type": "image_picker",
+      "id": "col3_image",
+      "label": "Column 3 image"
+    },
+    {
+      "type": "text",
+      "id": "col3_title",
+      "label": "Column 3 title",
+      "default": "Smartwatch"
+    },
+
+    {
+      "type": "header",
+      "content": "Section backgrounds"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "outer_background",
+      "label": "Outer background",
+      "default": "#111111"
+    },
+
+    {
+      "type": "header",
+      "content": "Table colors"
+    },
+    {
+      "type": "color",
+      "id": "featured_column_background",
+      "label": "Featured column background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "dark_column_background_top",
+      "label": "Dark column background top",
+      "default": "#3f3f3f"
+    },
+    {
+      "type": "color",
+      "id": "dark_column_background_bottom",
+      "label": "Dark column background bottom",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "color",
+      "id": "featured_header_background",
+      "label": "Featured header background",
+      "default": "#f7f7f7"
+    },
+    {
+      "type": "color",
+      "id": "dark_header_background_top",
+      "label": "Dark header background top",
+      "default": "#424242"
+    },
+    {
+      "type": "color",
+      "id": "dark_header_background_bottom",
+      "label": "Dark header background bottom",
+      "default": "#272727"
+    },
+    {
+      "type": "color",
+      "id": "featured_row_background",
+      "label": "Featured rows background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "dark_row_background_top",
+      "label": "Dark rows background top",
+      "default": "#3b3b3b"
+    },
+    {
+      "type": "color",
+      "id": "dark_row_background_bottom",
+      "label": "Dark rows background bottom",
+      "default": "#202020"
+    },
+
+    {
+      "type": "header",
+      "content": "Borders"
+    },
+    {
+      "type": "color",
+      "id": "table_border_color",
+      "label": "Table border color",
+      "default": "#2a2a2a"
+    },
+    {
+      "type": "color",
+      "id": "row_border_color",
+      "label": "Row border color",
+      "default": "rgba(255,255,255,0.12)"
+    },
+    {
+      "type": "color",
+      "id": "column_border_color",
+      "label": "Column border color",
+      "default": "rgba(255,255,255,0.12)"
+    },
+
+    {
+      "type": "header",
+      "content": "Image box colors"
+    },
+    {
+      "type": "color",
+      "id": "featured_image_box_background",
+      "label": "Featured image box background",
+      "default": "#ebebeb"
+    },
+    {
+      "type": "color",
+      "id": "dark_image_box_background",
+      "label": "Dark image box background",
+      "default": "#4a4a4a"
+    },
+
+    {
+      "type": "header",
+      "content": "Text colors"
+    },
+    {
+      "type": "color",
+      "id": "featured_title_color",
+      "label": "Featured title color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "dark_title_color",
+      "label": "Dark title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "featured_text_color",
+      "label": "Featured text color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "dark_text_color",
+      "label": "Dark text color",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "header",
+      "content": "Badge colors"
+    },
+    {
+      "type": "color",
+      "id": "badge_background",
+      "label": "Badge background",
+      "default": "#4d9b1f"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Badge text color",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "header",
+      "content": "Icon colors"
+    },
+    {
+      "type": "color",
+      "id": "featured_icon_background",
+      "label": "Featured icon background",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "featured_icon_color",
+      "label": "Featured icon color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "yes_icon_background",
+      "label": "Yes icon background",
+      "default": "#4f7e38"
+    },
+    {
+      "type": "color",
+      "id": "yes_icon_color",
+      "label": "Yes icon color",
+      "default": "#d8ffd0"
+    },
+    {
+      "type": "color",
+      "id": "no_icon_background",
+      "label": "No icon background",
+      "default": "#8f2c2c"
+    },
+    {
+      "type": "color",
+      "id": "no_icon_color",
+      "label": "No icon color",
+      "default": "#ffd0d0"
+    },
+
+    {
+      "type": "header",
+      "content": "Sizes and radius"
+    },
+    {
+      "type": "range",
+      "id": "table_radius",
+      "label": "Table corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "image_box_radius",
+      "label": "Desktop image box radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "image_box_radius_mobile",
+      "label": "Mobile image box radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "image_box_size_desktop",
+      "label": "Desktop image box size",
+      "min": 70,
+      "max": 180,
+      "step": 5,
+      "default": 130
+    },
+    {
+      "type": "range",
+      "id": "image_box_size_tablet",
+      "label": "Tablet image box size",
+      "min": 60,
+      "max": 150,
+      "step": 5,
+      "default": 110
+    },
+    {
+      "type": "range",
+      "id": "image_box_size_mobile",
+      "label": "Mobile image box size",
+      "min": 50,
+      "max": 120,
+      "step": 5,
+      "default": 90
+    },
+    {
+      "type": "range",
+      "id": "icon_size_desktop",
+      "label": "Desktop icon size",
+      "min": 36,
+      "max": 90,
+      "step": 2,
+      "default": 62
+    },
+    {
+      "type": "range",
+      "id": "icon_size_tablet",
+      "label": "Tablet icon size",
+      "min": 30,
+      "max": 70,
+      "step": 2,
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "icon_size_mobile",
+      "label": "Mobile icon size",
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "default": 42
+    },
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "outer_padding",
+      "label": "Outer padding",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Section top padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Section bottom padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_row",
+      "name": "Feature row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "row_text",
+          "label": "Text",
+          "default": "USED AS AN ALARM"
+        },
+        {
+          "type": "checkbox",
+          "id": "featured_has_check",
+          "label": "Featured column check",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "col2_has_check",
+          "label": "Column 2 check",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "col3_has_check",
+          "label": "Column 3 check",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Comparison table custom",
+      "blocks": [
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_text": "USED AS AN ALARM",
+            "featured_has_check": true,
+            "col2_has_check": true,
+            "col3_has_check": true
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_text": "RELIABLE FOR PEOPLE WHO OVERSLEEP",
+            "featured_has_check": true,
+            "col2_has_check": false,
+            "col3_has_check": false
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_text": "14+ DAY BATTERY",
+            "featured_has_check": true,
+            "col2_has_check": false,
+            "col3_has_check": false
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_text": "PARTNER-FRIENDLY / SILENT WAKE-UP",
+            "featured_has_check": true,
+            "col2_has_check": false,
+            "col3_has_check": false
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "row_text": "100-DAY GUARANTEE",
+            "featured_has_check": true,
+            "col2_has_check": false,
+            "col3_has_check": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
