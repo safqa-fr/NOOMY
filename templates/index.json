@@ -148,6 +148,7 @@
         "item_Gfz4PA": {
           "type": "item",
           "settings": {
+            "video": "shopify://files/videos/4925141ee9624dd587479a1a5c35f928.mov",
             "column_size": "4",
             "title": "",
             "heading_tag": "h4",
@@ -173,10 +174,11 @@
         "item_nn8apK": {
           "type": "item",
           "settings": {
+            "video": "shopify://files/videos/abd8be0511fd46b3997d0daa12ef6057.mov",
             "column_size": "4",
-            "title": "Column title",
+            "title": "",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
