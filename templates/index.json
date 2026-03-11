@@ -185,6 +185,7 @@
         "item_433mDB": {
           "type": "item",
           "settings": {
+            "video": "shopify://files/videos/Video_2 (1).mp4",
             "column_size": "4",
             "title": "Column title",
             "heading_tag": "h4",
