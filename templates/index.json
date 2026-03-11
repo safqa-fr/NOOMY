@@ -58,6 +58,64 @@
     },
     "logo_list_h49dDB": {
       "type": "logo-list",
+      "blocks": {
+        "logo_cPKtFY": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Technology_Magazine-1.webp",
+            "logo_height": 60,
+            "logo_max_width": 160
+          }
+        },
+        "logo_wAkkgR": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/USA_Today__2020-01-29__svg.png",
+            "logo_height": 60,
+            "logo_max_width": 160
+          }
+        },
+        "logo_pqyLHM": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Sky-news-logo_new_svg.png",
+            "logo_height": 60,
+            "logo_max_width": 160
+          }
+        },
+        "logo_jXAgBP": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Technology_Magazine-1.webp",
+            "logo_height": 60,
+            "logo_max_width": 160
+          }
+        },
+        "logo_ApG8WK": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/USA_Today__2020-01-29__svg.png",
+            "logo_height": 60,
+            "logo_max_width": 160
+          }
+        },
+        "logo_nAtmUG": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Sky-news-logo_new_svg.png",
+            "logo_height": 60,
+            "logo_max_width": 160
+          }
+        }
+      },
+      "block_order": [
+        "logo_cPKtFY",
+        "logo_wAkkgR",
+        "logo_pqyLHM",
+        "logo_jXAgBP",
+        "logo_ApG8WK",
+        "logo_nAtmUG"
+      ],
       "name": "Logo carousel",
       "settings": {
         "bg_color": "#ffffff",
