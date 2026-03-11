@@ -301,23 +301,9 @@
             "liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Items Left Badge</title>\n\n<style>\n.unique-body-abc123 {\n  font-family: Arial, sans-serif;\n  background-color: #f9f9f9;\n  color: #333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n  gap: 10px;\n  transform: scale(0.8);\n}\n\n.unique-badge-def456 {\n  display: inline-flex;\n  align-items: center;\n  background-color: #ffdede;\n  color: #b22222;\n  padding: 3px 5px;\n  border-radius: 5px;\n  font-size: 10px;\n  font-weight: bold;\n  text-align: center;\n}\n\n.unique-flame-icon-ghi789,\n.unique-clock-icon-jkl012 {\n  margin-right: 4px;\n  display: inline-block;\n}\n\n.unique-flame-icon-ghi789 svg,\n.unique-clock-icon-jkl012 svg {\n  width: 12px;\n  height: 12px;\n}\n\n.unique-flame-icon-ghi789 svg {\n  animation: flame 2s infinite;\n}\n\n.unique-clock-icon-jkl012 svg {\n  animation: clock 2s infinite;\n}\n\n@keyframes flame {\n  0%,100%{transform:scale(1)}\n  50%{transform:scale(1.2)}\n}\n\n@keyframes clock {\n  0%,100%{transform:rotate(0)}\n  50%{transform:rotate(360deg)}\n}\n</style>\n</head>\n\n<body class=\"unique-body-abc123\">\n\n<div class=\"unique-badge-def456\">\n<span>\n<div class=\"unique-flame-icon-ghi789\">\n<svg viewBox=\"0 0 64 64\">\n<path fill=\"#FF4500\" d=\"M32 2C19 15 9 26 9 38c0 8 6 14 14 14s14-6 14-14c0-8-6-14-14-14s-14 6-14 14c0 8 6 14 14 14s14-6 14-14c0-8-6-14-14-14S18 22 18 30c0 8 6 14 14 14s14-6 14-14c0-8-6-14-14-14z\"/>\n</svg>\n</div>\n\n<span id=\"stock-number\">8</span> items left at this price\n\n</span>\n</div>\n\n<div class=\"unique-badge-def456\">\n<span>\n<div class=\"unique-clock-icon-jkl012\">\n<svg viewBox=\"0 0 64 64\">\n<circle cx=\"32\" cy=\"32\" r=\"30\" stroke=\"#b22222\" stroke-width=\"4\" fill=\"none\"/>\n<line x1=\"32\" y1=\"32\" x2=\"32\" y2=\"12\" stroke=\"#b22222\" stroke-width=\"4\"/>\n<line x1=\"32\" y1=\"32\" x2=\"44\" y2=\"32\" stroke=\"#b22222\" stroke-width=\"4\"/>\n</svg>\n</div>\nLimited stock available!\n</span>\n</div>\n\n<script>\n\nlet stock = 8\nconst minStock = 5\nconst maxStock = 15\n\nfunction updateStock(){\n\n  let random = Math.random()\n\n  if(random < 0.6 && stock > minStock){\n    stock--\n  } else if(random > 0.8 && stock < maxStock){\n    stock++\n  }\n\n  document.getElementById(\"stock-number\").innerText = stock\n\n}\n\nfunction randomInterval(){\n  const time = Math.floor(Math.random() * 6000) + 6000\n  setTimeout(()=>{\n    updateStock()\n    randomInterval()\n  }, time)\n}\n\nrandomInterval()\n\n</script>\n\n</body>\n</html>"
           }
         },
-        "text_74KCEb": {
-          "type": "text",
-          "settings": {
-            "text": "<p>\"I went to bed with <strong>uncertainty</strong>, as no alarm could wake me up. Since FitSleeps, I <strong>never oversleep</strong> and I’m sure I’ll <strong>wake up on time.</strong>\" <br/></p>"
-          }
-        },
         "separator_fzkBLi": {
           "type": "separator",
           "settings": {}
-        },
-        "description_aXpPet": {
-          "type": "description",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "collapse_content": false
-          }
         },
         "variant_picker_HXXwz6": {
           "type": "variant_picker",
@@ -370,9 +356,7 @@
         "badges_krbbXe",
         "price_4eieYC",
         "liquid_epf49N",
-        "text_74KCEb",
         "separator_fzkBLi",
-        "description_aXpPet",
         "variant_picker_HXXwz6",
         "quantity_selector_brjeaF",
         "liquid_FMmnBy",
