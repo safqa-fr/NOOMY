@@ -430,6 +430,60 @@
         "heading_gradient": ""
       }
     },
+    "multi_column_LkzPEJ": {
+      "type": "multi-column",
+      "blocks": {
+        "spacer_dwCTrt": {
+          "type": "spacer",
+          "settings": {
+            "column_size": "6"
+          }
+        },
+        "item_eHYXDE": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/0a4acb0d57294360a90023f45de428fc.HD-720p-4.5Mbps-59886218.mp4",
+            "column_size": "3",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_XkBYx8": {
+          "type": "item",
+          "settings": {
+            "column_size": "3",
+            "title": "Powerful Enough to Wake You. Silent to Everyone Else.",
+            "heading_tag": "h4",
+            "content": "<p>Rise Band wakes you with powerful wrist vibrations - <strong>3X stronger than smartwatches</strong>, yet localized to your wrist so it's completely silent to everyone else.</p><p>No more bed shakers waking your partner. No more weak smartwatches you sleep through. No more depending on others.</p><p><strong>Just reliable wake-ups, every single time - without guilt, without anxiety.</strong></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "spacer_dwCTrt",
+        "item_eHYXDE",
+        "item_XkBYx8"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "faq_EQx4Dx": {
       "type": "faq",
       "blocks": {
@@ -528,60 +582,6 @@
         "button_text_color": ""
       }
     },
-    "multi_column_LkzPEJ": {
-      "type": "multi-column",
-      "blocks": {
-        "spacer_dwCTrt": {
-          "type": "spacer",
-          "settings": {
-            "column_size": "6"
-          }
-        },
-        "item_eHYXDE": {
-          "type": "item",
-          "settings": {
-            "video": "shopify://files/videos/0a4acb0d57294360a90023f45de428fc.HD-720p-4.5Mbps-59886218.mp4",
-            "column_size": "3",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_XkBYx8": {
-          "type": "item",
-          "settings": {
-            "column_size": "3",
-            "title": "Powerful Enough to Wake You. Silent to Everyone Else.",
-            "heading_tag": "h4",
-            "content": "<p>Rise Band wakes you with powerful wrist vibrations - <strong>3X stronger than smartwatches</strong>, yet localized to your wrist so it's completely silent to everyone else.</p><p>No more bed shakers waking your partner. No more weak smartwatches you sleep through. No more depending on others.</p><p><strong>Just reliable wake-ups, every single time - without guilt, without anxiety.</strong></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "spacer_dwCTrt",
-        "item_eHYXDE",
-        "item_XkBYx8"
-      ],
-      "name": "Multi-column",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "gap": "medium",
-        "text_alignment": "start",
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "multi_column_tg6hXk": {
       "type": "multi-column",
       "blocks": {
@@ -645,9 +645,9 @@
     "multi_column_Hrw3Qt",
     "featured_product_6EHHGX",
     "tabs_y8zmfe",
-    "faq_EQx4Dx",
-    "contact_ApggHV",
     "multi_column_LkzPEJ",
-    "multi_column_tg6hXk"
+    "multi_column_tg6hXk",
+    "faq_EQx4Dx",
+    "contact_ApggHV"
   ]
 }
