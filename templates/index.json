@@ -217,12 +217,34 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "contact_ApggHV": {
+      "type": "contact",
+      "name": "Contact form",
+      "settings": {
+        "full_width": true,
+        "subheading": "Contact Us",
+        "title": "Do you have any question?",
+        "content": "",
+        "text_position": "center",
+        "contact_form_size": "large",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "contact_background": "",
+        "contact_text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
     }
   },
   "order": [
     "image-with-text-overlay",
     "logo_list_h49dDB",
     "image_with_text_overlay_ULrJMg",
-    "multi_column_Hrw3Qt"
+    "multi_column_Hrw3Qt",
+    "contact_ApggHV"
   ]
 }
