@@ -14,37 +14,45 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "message_zYPrze": {
+          "type": "message",
+          "settings": {
+            "text": "🌸Women’s Day Sale — Up to 50% OFF🌸",
+            "url": ""
+          }
+        },
         "message_PViBAt": {
           "type": "message",
           "settings": {
-            "text": "Free US Shipping on All Orders",
+            "text": "100% Secure Payment",
             "url": ""
           }
         },
         "message": {
           "type": "message",
           "settings": {
-            "text": "⏰ 30-Day Money-Back Guarantee — Zero Risk",
+            "text": "30-Day Money-Back Guarantee",
             "url": ""
           }
         },
         "message_xeKhAc": {
           "type": "message",
           "settings": {
-            "text": "⚡ Limited Stock — Order Ships Within 24 Hours",
+            "text": "Free Shipping",
             "url": ""
           }
         }
       },
       "block_order": [
+        "message_zYPrze",
         "message_PViBAt",
         "message",
         "message_xeKhAc"
       ],
       "settings": {
-        "enable_sticky": true,
-        "autoplay": true,
-        "cycle_speed": 5,
+        "enable_sticky": false,
+        "autoplay": false,
+        "cycle_speed": 6,
         "text_size": "text-base",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
