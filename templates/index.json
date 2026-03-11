@@ -50,8 +50,8 @@
         "enable_parallax": false,
         "image_size": "auto",
         "image": "shopify://shop_images/montre-connecter-alarm_webp.jpg",
-        "mobile_text_position": "place-self-end-center text-center",
-        "desktop_text_position": "sm:place-self-center-end sm:text-end",
+        "mobile_text_position": "place-self-start text-start",
+        "desktop_text_position": "sm:place-self-end-center sm:text-center",
         "text_color": "#ffffff",
         "overlay_color": "#000000",
         "overlay_opacity": 30
