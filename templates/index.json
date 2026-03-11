@@ -168,6 +168,82 @@
         "overlay_opacity": 0
       }
     },
+    "multi_column_Hrw3Qt": {
+      "type": "multi-column",
+      "blocks": {
+        "item_nn8apK": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/abd8be0511fd46b3997d0daa12ef6057.mov",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_433mDB": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/Video_2 (1).mp4",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_Gfz4PA": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/803611a50e724797995fa06cc05b9c39.mov",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_PKxN4w": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/4b502b23a3264253a5f263ce02c02fd9.mov",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_nn8apK",
+        "item_433mDB",
+        "item_Gfz4PA",
+        "item_PKxN4w"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "featured_product_6EHHGX": {
       "type": "featured-product",
       "blocks": {
@@ -354,82 +430,6 @@
         "heading_gradient": ""
       }
     },
-    "multi_column_Hrw3Qt": {
-      "type": "multi-column",
-      "blocks": {
-        "item_nn8apK": {
-          "type": "item",
-          "settings": {
-            "video": "shopify://files/videos/abd8be0511fd46b3997d0daa12ef6057.mov",
-            "column_size": "4",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_433mDB": {
-          "type": "item",
-          "settings": {
-            "video": "shopify://files/videos/Video_2 (1).mp4",
-            "column_size": "4",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_Gfz4PA": {
-          "type": "item",
-          "settings": {
-            "video": "shopify://files/videos/803611a50e724797995fa06cc05b9c39.mov",
-            "column_size": "4",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_PKxN4w": {
-          "type": "item",
-          "settings": {
-            "video": "shopify://files/videos/4b502b23a3264253a5f263ce02c02fd9.mov",
-            "column_size": "4",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "item_nn8apK",
-        "item_433mDB",
-        "item_Gfz4PA",
-        "item_PKxN4w"
-      ],
-      "name": "Multi-column",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "gap": "medium",
-        "text_alignment": "start",
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "faq_EQx4Dx": {
       "type": "faq",
       "blocks": {
@@ -527,6 +527,114 @@
         "button_background": "",
         "button_text_color": ""
       }
+    },
+    "multi_column_LkzPEJ": {
+      "type": "multi-column",
+      "blocks": {
+        "spacer_dwCTrt": {
+          "type": "spacer",
+          "settings": {
+            "column_size": "6"
+          }
+        },
+        "item_eHYXDE": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/0a4acb0d57294360a90023f45de428fc.HD-720p-4.5Mbps-59886218.mp4",
+            "column_size": "3",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_XkBYx8": {
+          "type": "item",
+          "settings": {
+            "column_size": "3",
+            "title": "Powerful Enough to Wake You. Silent to Everyone Else.",
+            "heading_tag": "h4",
+            "content": "<p>Rise Band wakes you with powerful wrist vibrations - <strong>3X stronger than smartwatches</strong>, yet localized to your wrist so it's completely silent to everyone else.</p><p>No more bed shakers waking your partner. No more weak smartwatches you sleep through. No more depending on others.</p><p><strong>Just reliable wake-ups, every single time - without guilt, without anxiety.</strong></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "spacer_dwCTrt",
+        "item_eHYXDE",
+        "item_XkBYx8"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "multi_column_tg6hXk": {
+      "type": "multi-column",
+      "blocks": {
+        "spacer_LFypEL": {
+          "type": "spacer",
+          "settings": {
+            "column_size": "6"
+          }
+        },
+        "item_Nwmakw": {
+          "type": "item",
+          "settings": {
+            "column_size": "3",
+            "title": "How it works",
+            "heading_tag": "h4",
+            "content": "<p>You put the wristband on before you go to sleep and easily set the alarm clock. When the alarm clock goes off, you turn it off and put the wristband back on your nightstand.<br/><br/></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_ErJDTb": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/5c2b429a8a584077ba2032b79129516d.HD-720p-4.5Mbps-59886328.mp4",
+            "column_size": "3",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "spacer_LFypEL",
+        "item_Nwmakw",
+        "item_ErJDTb"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
@@ -534,10 +642,12 @@
     "logo_list_h49dDB",
     "rich_text_647zrN",
     "image_with_text_overlay_ULrJMg",
+    "multi_column_Hrw3Qt",
     "featured_product_6EHHGX",
     "tabs_y8zmfe",
-    "multi_column_Hrw3Qt",
     "faq_EQx4Dx",
-    "contact_ApggHV"
+    "contact_ApggHV",
+    "multi_column_LkzPEJ",
+    "multi_column_tg6hXk"
   ]
 }
