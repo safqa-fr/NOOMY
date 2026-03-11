@@ -17,7 +17,7 @@
         "message_PViBAt": {
           "type": "message",
           "settings": {
-            "text": "🚚 Free US Shipping on All Orders",
+            "text": "Free US Shipping on All Orders",
             "url": ""
           }
         },
@@ -44,7 +44,7 @@
       "settings": {
         "enable_sticky": true,
         "autoplay": true,
-        "cycle_speed": 6,
+        "cycle_speed": 5,
         "text_size": "text-base",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
