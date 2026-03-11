@@ -17,21 +17,21 @@
         "message_PViBAt": {
           "type": "message",
           "settings": {
-            "text": "Garantie de remboursement de 30 jours",
+            "text": "🚚 Free US Shipping on All Orders",
             "url": ""
           }
         },
         "message": {
           "type": "message",
           "settings": {
-            "text": "Livraison gratuite",
+            "text": "⏰ 30-Day Money-Back Guarantee — Zero Risk",
             "url": ""
           }
         },
         "message_xeKhAc": {
           "type": "message",
           "settings": {
-            "text": "Soldes – -50 % sur Noomy, offre limitée",
+            "text": "⚡ Limited Stock — Order Ships Within 24 Hours",
             "url": ""
           }
         }
@@ -42,13 +42,13 @@
         "message_xeKhAc"
       ],
       "settings": {
-        "enable_sticky": false,
-        "autoplay": false,
-        "cycle_speed": 5,
+        "enable_sticky": true,
+        "autoplay": true,
+        "cycle_speed": 6,
         "text_size": "text-xs",
         "navigation_mode": "arrows",
         "scrolling_speed": 10,
-        "background": "#202020",
+        "background": "#1a3c5e",
         "background_gradient": "",
         "text_color": "#ffffff"
       }
