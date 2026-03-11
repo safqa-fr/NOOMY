@@ -182,7 +182,7 @@
         "subheading": "",
         "title": "Featured content",
         "content": "<p>Organize content into multiple columns to share useful information to your customers about your products, values...</p>",
-        "background": "",
+        "background": "#ffffff",
         "background_gradient": "",
         "text_color": ""
       }
