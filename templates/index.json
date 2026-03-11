@@ -58,64 +58,6 @@
     },
     "logo_list_h49dDB": {
       "type": "logo-list",
-      "blocks": {
-        "logo_RzMJDt": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Technology_Magazine-1.webp",
-            "logo_height": 114,
-            "logo_max_width": 160
-          }
-        },
-        "logo_mjFd4M": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/USA_Today__2020-01-29__svg.png",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        },
-        "logo_7mUirL": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Sky-news-logo_new_svg.png",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        },
-        "logo_fMbCKw": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Technology_Magazine-1.webp",
-            "logo_height": 114,
-            "logo_max_width": 160
-          }
-        },
-        "logo_JnXcED": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/USA_Today__2020-01-29__svg.png",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        },
-        "logo_NrYKWQ": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Sky-news-logo_new_svg.png",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        }
-      },
-      "block_order": [
-        "logo_RzMJDt",
-        "logo_mjFd4M",
-        "logo_7mUirL",
-        "logo_fMbCKw",
-        "logo_JnXcED",
-        "logo_NrYKWQ"
-      ],
       "name": "Logo carousel",
       "settings": {
         "bg_color": "#ffffff",
@@ -125,72 +67,53 @@
         "gap": 40
       }
     },
-    "multi_column_dUTpn3": {
-      "type": "multi-column",
+    "image_with_text_overlay_ULrJMg": {
+      "type": "image-with-text-overlay",
       "blocks": {
-        "item_hAerCn": {
-          "type": "item",
+        "subheading_DWBmQB": {
+          "type": "subheading",
           "settings": {
-            "image": "shopify://shop_images/Kopie_van_V2_-_PRODUCT_PICS_32.webp",
-            "column_size": "3",
-            "title": "Increasing Vibration",
-            "heading_tag": "h4",
-            "content": "<p>Starts gentle, gets stronger. By cycling through three distinct levels of intensity your brain can't tune it out like sound.</p><p>3 INTENSITY LEVELS </p><p>99% WAKE RATE</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
+            "text": "Subheading"
           }
         },
-        "item_yGmVEj": {
-          "type": "item",
+        "heading_GMTyRb": {
+          "type": "heading",
           "settings": {
-            "image": "shopify://shop_images/Kopie_van_V2_-_PRODUCT_PICS_35.webp",
-            "column_size": "3",
-            "title": "Silent Wake-Up",
-            "heading_tag": "h4",
-            "content": "<p>Wake up without disturbing your partner. No loud alarms, just a vibration on your wrist that only you feel.</p><p>0 dB NOISE LEVEL </p><p>100% Silent</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
+            "text": "Image with text overlay",
+            "heading_tag": "h1"
           }
         },
-        "item_gA4cwx": {
-          "type": "item",
+        "richtext_JPQEVB": {
+          "type": "richtext",
           "settings": {
-            "image": "shopify://shop_images/Kopie_van_V2_-_PRODUCT_PICS_49.webp",
-            "column_size": "3",
-            "title": "14+ Day Battery",
-            "heading_tag": "h4",
-            "content": "<p>Set it and forget it. Up to 14 days on a single charge of 1 hour. Fast USB charging when you need it.</p><p>20 DAYS (PRO)</p><p>USB FAST CHARGE</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
           }
         }
       },
       "block_order": [
-        "item_hAerCn",
-        "item_yGmVEj",
-        "item_gA4cwx"
+        "subheading_DWBmQB",
+        "heading_GMTyRb",
+        "richtext_JPQEVB"
       ],
-      "name": "Multi-column",
+      "name": "Image with text overlay",
       "settings": {
         "full_width": true,
-        "stack_on_mobile": false,
-        "gap": "medium",
-        "text_alignment": "center",
-        "subheading": "",
-        "title": "Change your morning.",
-        "content": "<h1><strong>Set, Wear, Wake Up</strong></h1>",
-        "background": "#ffffff",
-        "background_gradient": "",
-        "text_color": ""
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/ChatGPT_Image_11_mars_2026_23_19_05.png",
+        "mobile_image": "shopify://shop_images/ChatGPT_Image_11_mars_2026_23_19_05.png",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
       }
     }
   },
   "order": [
     "image-with-text-overlay",
     "logo_list_h49dDB",
-    "multi_column_dUTpn3"
+    "image_with_text_overlay_ULrJMg"
   ]
 }
