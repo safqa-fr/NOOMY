@@ -1,234 +1,123 @@
-{%- if section.blocks.size > 0 -%}
-  {%- render 'section-spacing-collapsing' -%}
-
-  <style>
-    #shopify-section-{{ section.id }} {
-      --logo-list-item-max-size: 280px;
-      --logo-list-grid: {% if section.settings.stack_mobile %}auto-flow 1fr / repeat(var(--logo-list-items-per-row), minmax(0, var(--logo-list-item-max-size))){% else %}1fr / auto-flow 52vw{% endif %};
-      --logo-list-items-per-row: {{ 2 | at_most : section.blocks.size }};
-      --logo-list-items-border: {{ section.settings.logo_item_border.rgb }} / {{ section.settings.logo_item_border.alpha }};
-    }
-
-    @media screen and (min-width: 700px) {
-      #shopify-section-{{ section.id }} {
-        --logo-list-grid: auto-flow 1fr / repeat(var(--logo-list-items-per-row), minmax(0, var(--logo-list-item-max-size)));
-        --logo-list-items-per-row: {{ 3 | at_most : section.blocks.size }};
-      }
-    }
-
-    @media screen and (min-width: 1000px) {
-      #shopify-section-{{ section.id }} {
-        --logo-list-items-per-row: {{ 4 | at_most: section.settings.items_per_row | at_most: section.blocks.size }};
-      }
-    }
-
-    @media screen and (min-width: 1150px) {
-      #shopify-section-{{ section.id }} {
-        --logo-list-items-per-row: {{ section.settings.items_per_row | at_most: section.blocks.size }};
-      }
-    }
-  </style>
-
-  <div {% render 'section-properties' %}>
-    <div class="section-stack {% if section.settings.text_alignment == 'center' %}sm:justify-items-center{% endif %}">
-      <div class="prose {% if section.settings.text_alignment == 'center' %}text-center{% endif %}">
-        {%- if section.settings.title != blank -%}
-          <h2 class="h2">
-            {%- render 'styled-text', content: section.settings.title, text_color: section.settings.heading_color, gradient: section.settings.heading_gradient -%}
-          </h2>
-        {%- endif -%}
-
-        {{- section.settings.content -}}
-      </div>
-
-      <reveal-items class="logo-list {% unless section.settings.stack_mobile %}scroll-area bleed sm:unbleed{% endunless %}">
-        {%- for block in section.blocks -%}
-          {%- liquid
-            assign loading_strategy = nil
-  
-            if section.index > 3 or forloop.index > 3
-              assign loading_strategy = 'lazy'
-            endif
-          -%}
-
-          {%- capture block_content -%}
-            {%- if block.settings.logo != blank -%}
-              {%- capture sizes -%}{{ block.settings.logo_width }}px{%- endcapture -%}
-              {%- capture widths -%}{{ block.settings.logo_width }}, {{ block.settings.logo_width | times: 2 | at_most: block.settings.logo.width }}{%- endcapture -%}
-              {%- capture max_width -%}--logo-list-image-max-width: {{ block.settings.logo_width }}px{%- endcapture -%}
-              {{- block.settings.logo | image_url: width: block.settings.logo.width | image_tag: style: max_width, loading: loading_strategy, widths: widths, class: 'logo-list__image', sizes: sizes -}}
-            {%- else -%}
-              {{- 'image' | placeholder_svg_tag: 'logo-list__image' -}}
-            {%- endif -%}
-          {%- endcapture -%}
-
-          {% capture item_attribute %}
-           {%- render 'surface', class: 'logo-list__item', background: section.settings.logo_item_background, background_fallback: 'bg-secondary' -%}
-          {%- endcapture -%}
-
-          {%- if block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}" {{ item_attribute }} {{ block.shopify_attributes }}>
-              {{- block_content -}}
-            </a>
-          {%- else -%}
-            <div {{ item_attribute }} {{ block.shopify_attributes }}>
-              {{- block_content -}}
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
-      </reveal-items>
-    </div>
-  </div>
-{%- endif -%}
-
 {% schema %}
 {
-  "name": "Logo list",
-  "class": "shopify-section--logo-list",
-  "tag": "section",
-  "disabled_on": {
-    "templates": ["password"],
-    "groups": ["header", "custom.overlay"]
-  },
+  "name": "Logo carousel",
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "Full width",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "stack_mobile",
-      "label": "Stack on mobile",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "Logo list"
-    },
-    {
-      "type": "richtext",
-      "id": "content",
-      "label": "Content"
-    },
-    {
-      "type": "select",
-      "id": "text_alignment",
-      "label": "Text alignment",
-      "options": [
-        {
-          "value": "start",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        }
-      ],
-      "default": "start"
-    },
+    { "type": "color", "id": "bg_color", "label": "Couleur fond", "default": "#ffffff" },
+
     {
       "type": "range",
-      "id": "items_per_row",
-      "min": 3,
-      "max": 7,
-      "label": "Items per row (desktop)",
-      "default": 5
+      "id": "section_height",
+      "label": "Hauteur du fond (px)",
+      "min": 40,
+      "max": 200,
+      "step": 5,
+      "default": 90
     },
-    {
-      "type": "header",
-      "content": "Colors",
-      "info": "Gradient replaces solid colors when set."
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Background"
-    },
-    {
-      "type": "color_background",
-      "id": "background_gradient",
-      "label": "Background gradient"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text"
-    },
-    {
-      "type": "color",
-      "id": "heading_color",
-      "label": "Heading color"
-    },
-    {
-      "type": "color_background",
-      "id": "heading_gradient",
-      "label": "Heading gradient"
-    },
-    {
-      "type": "color",
-      "id": "logo_item_background",
-      "label": "Logo background"
-    },
-    {
-      "type": "color",
-      "id": "logo_item_border",
-      "label": "Logo border"
-    }
+
+    { "type": "range", "id": "carousel_width", "label": "Largeur (%)", "min": 60, "max": 100, "step": 5, "default": 100 },
+    { "type": "range", "id": "speed", "label": "Vitesse (sec)", "min": 10, "max": 70, "step": 5, "default": 30 },
+    { "type": "range", "id": "gap", "label": "Espace (px)", "min": 10, "max": 80, "step": 5, "default": 40 }
   ],
   "blocks": [
     {
       "type": "logo",
       "name": "Logo",
       "settings": [
+        { "type": "image_picker", "id": "logo", "label": "Image logo" },
         {
-          "type": "image_picker",
-          "id": "logo",
-          "label": "Logo",
-          "info": "300 x 90px .jpg recommended"
+          "type": "range",
+          "id": "logo_height",
+          "label": "Hauteur logo (px)",
+          "min": 20,
+          "max": 220,
+          "step": 2,
+          "default": 60
         },
         {
           "type": "range",
-          "id": "logo_width",
-          "min": 50,
-          "max": 300,
-          "unit": "px",
-          "step": 10,
-          "label": "Logo width",
-          "default": 120
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "Link"
+          "id": "logo_max_width",
+          "label": "Largeur max logo (px)",
+          "min": 40,
+          "max": 400,
+          "step": 5,
+          "default": 160
         }
       ]
     }
   ],
-  "presets": [
-    {
-      "name": "Logo list",
-      "blocks": [
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        }
-      ]
-    }
-  ]
+  "presets": [{ "name": "Logo carousel" }]
 }
 {% endschema %}
+
+<div class="lc-wrap"
+     style="
+       background: {{ section.settings.bg_color }};
+       height: {{ section.settings.section_height }}px;
+     ">
+
+  <div class="lc-inner" style="max-width: {{ section.settings.carousel_width }}%;">
+
+    <div class="lc-track">
+      {% for block in section.blocks %}
+        {% if block.settings.logo != blank %}
+          <div class="lc-item" {{ block.shopify_attributes }}>
+            <img
+              src="{{ block.settings.logo | image_url: width: 900 }}"
+              style="height: {{ block.settings.logo_height }}px; max-width: {{ block.settings.logo_max_width }}px;"
+              loading="lazy"
+              alt=""
+            >
+          </div>
+        {% endif %}
+      {% endfor %}
+
+      {% for block in section.blocks %}
+        {% if block.settings.logo != blank %}
+          <div class="lc-item">
+            <img
+              src="{{ block.settings.logo | image_url: width: 900 }}"
+              style="height: {{ block.settings.logo_height }}px; max-width: {{ block.settings.logo_max_width }}px;"
+              loading="lazy"
+              alt=""
+            >
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+<style>
+.lc-wrap{
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+}
+
+.lc-inner{ margin:auto; overflow:hidden; width:100%; }
+
+.lc-track{
+  display:flex;
+  align-items:center;
+  gap: {{ section.settings.gap }}px;
+  width:max-content;
+  animation: scroll linear infinite;
+  animation-duration: {{ section.settings.speed }}s;
+}
+
+.lc-item{ flex:0 0 auto; display:flex; align-items:center; }
+
+.lc-item img{
+  width:auto;
+  object-fit:contain;
+  transition:.25s;
+}
+
+.lc-item img:hover{ transform:scale(1.05); }
+
+@keyframes scroll{
+  from{ transform:translateX(0);}
+  to{ transform:translateX(-50%);}
+}
+</style>
