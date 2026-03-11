@@ -123,6 +123,38 @@
     "logo_list_h49dDB": {
       "type": "logo-list",
       "blocks": {
+        "logo_TVXiVY": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/4_d70d842b-16fd-4d97-af8d-62e1e9fced69.webp",
+            "logo_height": 60,
+            "logo_max_width": 160
+          }
+        },
+        "logo_9XxgCm": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/2_170a5cb3-9958-46ec-9c87-6eb0b2efbf0e.webp",
+            "logo_height": 60,
+            "logo_max_width": 160
+          }
+        },
+        "logo_BTcmWz": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/1_7dfd25c6-596a-45fa-b192-0d1733b19d2b.avif",
+            "logo_height": 60,
+            "logo_max_width": 160
+          }
+        },
+        "logo_9kzgLt": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/3_ec800bac-391e-4323-bc51-bacf85a5fe80.webp",
+            "logo_height": 60,
+            "logo_max_width": 160
+          }
+        },
         "logo_TLRDiC": {
           "type": "logo",
           "settings": {
@@ -147,28 +179,24 @@
             "logo_max_width": 160
           }
         },
-        "logo_9kzgLt": {
+        "logo_BW3BkH": {
           "type": "logo",
           "settings": {
             "logo": "shopify://shop_images/3_ec800bac-391e-4323-bc51-bacf85a5fe80.webp",
             "logo_height": 60,
             "logo_max_width": 160
           }
-        },
-        "logo_gcMAiN": {
-          "type": "logo",
-          "settings": {
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
         }
       },
       "block_order": [
+        "logo_TVXiVY",
+        "logo_9XxgCm",
+        "logo_BTcmWz",
+        "logo_9kzgLt",
         "logo_TLRDiC",
         "logo_bmXMrN",
         "logo_ykqT7G",
-        "logo_9kzgLt",
-        "logo_gcMAiN"
+        "logo_BW3BkH"
       ],
       "name": "Logo carousel",
       "settings": {
