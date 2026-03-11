@@ -56,147 +56,8 @@
         "overlay_opacity": 10
       }
     },
-    "slideshow_4NRtVF": {
-      "type": "slideshow",
-      "blocks": {
-        "image_djYMyV": {
-          "type": "image",
-          "settings": {
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "Tell your story",
-            "title": "Slide title",
-            "heading_tag": "h0",
-            "button_text": "",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30,
-            "background": "",
-            "background_gradient": ""
-          }
-        },
-        "image_ECN6cE": {
-          "type": "image",
-          "settings": {
-            "content_max_width": 580,
-            "mobile_text_position": "place-self-end-center text-center",
-            "desktop_text_position": "sm:place-self-center-end sm:text-end",
-            "subheading": "Subheading",
-            "title": "Haeding",
-            "heading_tag": "h1",
-            "button_text": "Découvrir NOOMY",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#cb8838",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30,
-            "background": "",
-            "background_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_djYMyV",
-        "image_ECN6cE"
-      ],
-      "disabled": true,
-      "name": "Slideshow",
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": true,
-        "show_initial_transition": false,
-        "image_size": "auto",
-        "controls_type": "dots",
-        "transition_type": "fade_with_text",
-        "autoplay": false,
-        "cycle_speed": 6,
-        "background": "#f2f2f2",
-        "background_gradient": ""
-      }
-    },
     "logo_list_h49dDB": {
       "type": "logo-list",
-      "blocks": {
-        "logo_TVXiVY": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/4_d70d842b-16fd-4d97-af8d-62e1e9fced69.webp",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        },
-        "logo_9XxgCm": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/2_170a5cb3-9958-46ec-9c87-6eb0b2efbf0e.webp",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        },
-        "logo_BTcmWz": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/1_7dfd25c6-596a-45fa-b192-0d1733b19d2b.avif",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        },
-        "logo_9kzgLt": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/3_ec800bac-391e-4323-bc51-bacf85a5fe80.webp",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        },
-        "logo_TLRDiC": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/4_d70d842b-16fd-4d97-af8d-62e1e9fced69.webp",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        },
-        "logo_bmXMrN": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/2_170a5cb3-9958-46ec-9c87-6eb0b2efbf0e.webp",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        },
-        "logo_ykqT7G": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/1_7dfd25c6-596a-45fa-b192-0d1733b19d2b.avif",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        },
-        "logo_BW3BkH": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/3_ec800bac-391e-4323-bc51-bacf85a5fe80.webp",
-            "logo_height": 60,
-            "logo_max_width": 160
-          }
-        }
-      },
-      "block_order": [
-        "logo_TVXiVY",
-        "logo_9XxgCm",
-        "logo_BTcmWz",
-        "logo_9kzgLt",
-        "logo_TLRDiC",
-        "logo_bmXMrN",
-        "logo_ykqT7G",
-        "logo_BW3BkH"
-      ],
       "name": "Logo carousel",
       "settings": {
         "bg_color": "#ffffff",
@@ -209,7 +70,6 @@
   },
   "order": [
     "image-with-text-overlay",
-    "slideshow_4NRtVF",
     "logo_list_h49dDB"
   ]
 }
