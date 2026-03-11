@@ -32,7 +32,7 @@
             "size": "xl",
             "text": "Shop Now",
             "url": "",
-            "background": "#1e1d1d",
+            "background": "#000000",
             "text_color": ""
           }
         }
@@ -180,8 +180,8 @@
         "gap": "medium",
         "text_alignment": "center",
         "subheading": "",
-        "title": "Featured content",
-        "content": "<p>Organize content into multiple columns to share useful information to your customers about your products, values...</p>",
+        "title": "Change your morning.",
+        "content": "<h1><strong>Set, Wear, Wake Up</strong></h1>",
         "background": "#ffffff",
         "background_gradient": "",
         "text_color": ""
