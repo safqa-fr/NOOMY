@@ -69,32 +69,6 @@
     },
     "image_with_text_overlay_ULrJMg": {
       "type": "image-with-text-overlay",
-      "blocks": {
-        "subheading_DWBmQB": {
-          "type": "subheading",
-          "settings": {
-            "text": "Subheading"
-          }
-        },
-        "heading_GMTyRb": {
-          "type": "heading",
-          "settings": {
-            "text": "Image with text overlay",
-            "heading_tag": "h1"
-          }
-        },
-        "richtext_JPQEVB": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_DWBmQB",
-        "heading_GMTyRb",
-        "richtext_JPQEVB"
-      ],
       "name": "Image with text overlay",
       "settings": {
         "full_width": true,
