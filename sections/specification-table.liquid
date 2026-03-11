@@ -1,321 +1,624 @@
-{%- render 'section-spacing-collapsing' -%}
-{%- assign text_position = section.settings.text_position -%}
+{% assign section_id = section.id %}
 
-{%- comment -%}
-------------------------------------------------------------------------------------------------------------------------
-CSS
-------------------------------------------------------------------------------------------------------------------------
-{%- endcomment -%}
+<section class="comparison-table comparison-table-{{ section_id }}">
+  <div class="comparison-table__wrapper page-width">
+    <div class="comparison-table__grid comparison-table__grid--{{ section.settings.columns_count }}">
+      
+      <!-- Column 1 -->
+      <div class="comparison-table__column comparison-table__column--featured">
+        <div class="comparison-table__product comparison-table__product--featured">
+          {% if section.settings.featured_badge != blank %}
+            <div class="comparison-table__badge">
+              {{ section.settings.featured_badge }}
+            </div>
+          {% endif %}
 
-<style>
-  #shopify-section-{{ section.id }} {
-    --feature-chart-values-columns-count: 1;
-  }
+          {% if section.settings.featured_image != blank %}
+            <div class="comparison-table__image-wrap">
+              {{
+                section.settings.featured_image
+                | image_url: width: 400
+                | image_tag:
+                  loading: 'lazy',
+                  class: 'comparison-table__image',
+                  alt: section.settings.featured_title
+              }}
+            </div>
+          {% endif %}
 
-  @media screen and (min-width: 700px) {
-    {%- if text_position == 'center' -%}
-      #shopify-section-{{ section.id }} .section-stack__main {
-        width: 680px;
-        min-width: 680px;
-        margin-inline: auto;
-      }
-    {%- else -%}
-      #shopify-section-{{ section.id }} .section-stack {
-        flex-wrap: wrap;
-        justify-content: start;
-      }
-
-      #shopify-section-{{ section.id }} .section-stack__intro {
-        flex: 1 0 350px; /* Allow to grow and shrink with a range from 350px to 750px */
-        max-width: 750px;
-        width: auto;
-      }
-
-      #shopify-section-{{ section.id }} .section-stack__main {
-        flex: 1 1 600px;
-        min-width: 450px;
-        width: auto;
-      }
-    {%- endif -%}
-  }
-</style>
-
-{%- comment -%}
-------------------------------------------------------------------------------------------------------------------------
-LIQUID
-------------------------------------------------------------------------------------------------------------------------
-{%- endcomment -%}
-
-<div {% render 'section-properties' %}>
-  <div class="section-stack {% if text_position != 'center' %}section-stack--horizontal{% else %}section-stack--center{% endif %} {% if text_position == 'end' %}section-stack--reverse{% endif %}">
-    {%- if section.settings.subheading != blank or section.settings.title != blank or section.settings.content != blank or section.settings.button_text != blank -%}
-      <div class="section-stack__intro">
-        <div class="prose {% if text_position == 'center' %}text-center{% endif %}">
-          {%- if section.settings.subheading != blank -%}
-            <p class="subheading">{{ section.settings.subheading | escape }}</p>
-          {%- endif -%}
-
-          {%- if section.settings.title != blank -%}
-            <h2 class="h2">
-              {%- render 'styled-text', content: section.settings.title, text_color: section.settings.heading_color, gradient: section.settings.heading_gradient -%}
-            </h2>
-          {%- endif -%}
-
-          {{- section.settings.content -}}
-
-          {%- if section.settings.button_text != blank -%}
-            {%- render 'button', size: 'lg', href: section.settings.button_url, content: section.settings.button_text, background: section.settings.button_background, text_color: section.settings.button_text_color -%}
-          {%- endif -%}
+          {% if section.settings.featured_title != blank %}
+            <h3 class="comparison-table__title">{{ section.settings.featured_title }}</h3>
+          {% endif %}
         </div>
-      </div>
-    {%- endif -%}
 
-    <div class="section-stack__main">
-      {%- assign text_color = section.settings.chart_text_color | default: settings.text_color -%}
-      {%- assign background_color = section.settings.chart_background -%}
-
-      {%- if background_color == blank or background_color == 'rgba(0,0,0,0)' -%}
-        {%- assign background_color = settings.background | color_mix: text_color, 95 -%}
-      {%- endif -%}
-
-      <feature-chart max-rows="{{ section.settings.max_rows }}" {% render 'surface', class: 'feature-chart', background: background_color, text_color: text_color %}>
-        <div class="feature-chart__table divide-y scroll-area">
-          {%- assign outputted_count = 0 -%}
-
-          {%- for block in section.blocks -%}
-            {%- if block.settings.value == blank -%}
-              {%- continue -%}
-            {%- endif -%}
-
-            {%- assign outputted_count = outputted_count | plus: 1 -%}
-
-            <div class="feature-chart__table-row" {% if outputted_count > section.settings.max_rows %}hidden{% endif %} {{ block.shopify_attributes }}>
-              {%- if block.settings.heading != blank -%}
-                <div class="feature-chart__heading bold">{{ block.settings.heading }}</div>
-              {%- endif -%}
-
-              {%- assign stripped_value = block.settings.value | strip_html | strip -%}
-
-              <div class="feature-chart__value prose text-subdued">
-                {%- if stripped_value == 'FALSE' -%}
-                  <svg fill="none" class="icon offset-icon" width="16" height="16" viewBox="0 0 16 16" style="--icon-height: 16px">
-                    <path d="m.94 3.06 12 12 2.12-2.12-12-12L.94 3.06Zm2.12 12 12-12L12.94.94l-12 12 2.12 2.12Z" fill="{{ section.settings.chart_true_false_color | default: section.settings.chart_text_color | default: settings.text_color }}"></path>
-                  </svg>
-                {%- elsif stripped_value == 'TRUE' -%}
-                  <svg fill="none" class="icon offset-icon" width="20" height="16" viewBox="0 0 20 16" style="--icon-height: 16px">
-                    <path d="m2 7.6 5.259 5.6L18 2" stroke="{{ section.settings.chart_true_false_color | default: section.settings.chart_text_color | default: settings.text_color }}" stroke-width="3"></path>
-                  </svg>
-                {%- else -%}
-                  {{- block.settings.value -}}
-                {%- endif -%}
+        {% for block in section.blocks %}
+          {% if block.type == 'feature_row' %}
+            <div class="comparison-table__cell comparison-table__cell--featured" {{ block.shopify_attributes }}>
+              <div class="comparison-table__icon comparison-table__icon--featured">
+                {% if block.settings.featured_has_check %}
+                  <span class="comparison-table__check">✓</span>
+                {% else %}
+                  <span class="comparison-table__cross">✕</span>
+                {% endif %}
+              </div>
+              <div class="comparison-table__label comparison-table__label--featured">
+                {{ block.settings.label }}
               </div>
             </div>
-          {%- endfor -%}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- Column 2 -->
+      <div class="comparison-table__column comparison-table__column--dark">
+        <div class="comparison-table__product comparison-table__product--dark">
+          {% if section.settings.col2_image != blank %}
+            <div class="comparison-table__image-wrap">
+              {{
+                section.settings.col2_image
+                | image_url: width: 400
+                | image_tag:
+                  loading: 'lazy',
+                  class: 'comparison-table__image',
+                  alt: section.settings.col2_title
+              }}
+            </div>
+          {% endif %}
+
+          {% if section.settings.col2_title != blank %}
+            <h3 class="comparison-table__title comparison-table__title--light">{{ section.settings.col2_title }}</h3>
+          {% endif %}
         </div>
 
-        {%- if outputted_count > section.settings.max_rows -%}
-          <div class="feature-chart__toggle">
-            <button data-action="toggle-rows" data-view-more="{{ section.settings.view_all_text | escape }}" data-view-less="{{ section.settings.view_less_text | escape }}" class="text-with-icon group">
-              <span class="feature-chart__toggle-text reversed-link">{{- section.settings.view_all_text | escape -}}</span>
-              <span class="circle-chevron group-hover:colors">{%- render 'icon' with 'chevron-bottom-small' -%}</span>
-            </button>
-          </div>
-        {%- endif -%}
-      </feature-chart>
+        {% for block in section.blocks %}
+          {% if block.type == 'feature_row' %}
+            <div class="comparison-table__cell comparison-table__cell--dark" {{ block.shopify_attributes }}>
+              <div class="comparison-table__icon {% if block.settings.col2_has_check %}comparison-table__icon--yes{% else %}comparison-table__icon--no{% endif %}">
+                {% if block.settings.col2_has_check %}
+                  <span class="comparison-table__check">✓</span>
+                {% else %}
+                  <span class="comparison-table__cross">✕</span>
+                {% endif %}
+              </div>
+              <div class="comparison-table__label comparison-table__label--light">
+                {{ block.settings.label }}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- Column 3 -->
+      <div class="comparison-table__column comparison-table__column--dark">
+        <div class="comparison-table__product comparison-table__product--dark">
+          {% if section.settings.col3_image != blank %}
+            <div class="comparison-table__image-wrap">
+              {{
+                section.settings.col3_image
+                | image_url: width: 400
+                | image_tag:
+                  loading: 'lazy',
+                  class: 'comparison-table__image',
+                  alt: section.settings.col3_title
+              }}
+            </div>
+          {% endif %}
+
+          {% if section.settings.col3_title != blank %}
+            <h3 class="comparison-table__title comparison-table__title--light">{{ section.settings.col3_title }}</h3>
+          {% endif %}
+        </div>
+
+        {% for block in section.blocks %}
+          {% if block.type == 'feature_row' %}
+            <div class="comparison-table__cell comparison-table__cell--dark" {{ block.shopify_attributes }}>
+              <div class="comparison-table__icon {% if block.settings.col3_has_check %}comparison-table__icon--yes{% else %}comparison-table__icon--no{% endif %}">
+                {% if block.settings.col3_has_check %}
+                  <span class="comparison-table__check">✓</span>
+                {% else %}
+                  <span class="comparison-table__cross">✕</span>
+                {% endif %}
+              </div>
+              <div class="comparison-table__label comparison-table__label--light">
+                {{ block.settings.label }}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
     </div>
   </div>
-</div>
+
+  <style>
+    .comparison-table-{{ section_id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      background: {{ section.settings.section_bg }};
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-radius: 28px;
+      overflow: hidden;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__column--featured {
+      background: {{ section.settings.featured_column_bg }};
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__column--dark {
+      background: radial-gradient(circle at top, {{ section.settings.dark_column_gradient_start }}, {{ section.settings.dark_column_gradient_end }});
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__product {
+      min-height: 290px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 34px 22px 26px;
+      position: relative;
+      text-align: center;
+      border-bottom: 1px solid {{ section.settings.border_color }};
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__product--featured {
+      background: {{ section.settings.featured_column_bg }};
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__product--dark {
+      background: transparent;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: {{ section.settings.badge_bg }};
+      color: {{ section.settings.badge_text_color }};
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 800;
+      padding: 12px 18px;
+      border-radius: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__image-wrap {
+      width: 135px;
+      height: 135px;
+      border-radius: 24px;
+      background: {{ section.settings.image_box_bg }};
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      overflow: hidden;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__image {
+      max-width: 82%;
+      max-height: 82%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__title {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: {{ section.settings.featured_text_color }};
+      text-transform: uppercase;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__title--light {
+      color: {{ section.settings.dark_text_color }};
+      text-transform: none;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__cell {
+      min-height: 175px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 26px 20px;
+      text-align: center;
+      border-bottom: 1px solid {{ section.settings.border_color }};
+      border-right: 1px solid {{ section.settings.border_color }};
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__column:last-child .comparison-table__cell,
+    .comparison-table-{{ section_id }} .comparison-table__column:last-child .comparison-table__product {
+      border-right: none;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__cell--featured {
+      background: {{ section.settings.featured_row_bg }};
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__cell--dark {
+      background: transparent;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__icon--featured {
+      background: {{ section.settings.featured_icon_bg }};
+      color: {{ section.settings.featured_icon_color }};
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__icon--yes {
+      background: {{ section.settings.yes_icon_bg }};
+      color: {{ section.settings.yes_icon_color }};
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__icon--no {
+      background: {{ section.settings.no_icon_bg }};
+      color: {{ section.settings.no_icon_color }};
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__label {
+      font-size: 20px;
+      line-height: 1.3;
+      font-weight: 800;
+      text-transform: uppercase;
+      max-width: 320px;
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__label--featured {
+      color: {{ section.settings.featured_text_color }};
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__label--light {
+      color: {{ section.settings.dark_text_color }};
+    }
+
+    .comparison-table-{{ section_id }} .comparison-table__column .comparison-table__cell:last-child {
+      border-bottom: none;
+    }
+
+    @media screen and (max-width: 990px) {
+      .comparison-table-{{ section_id }} .comparison-table__title {
+        font-size: 22px;
+      }
+
+      .comparison-table-{{ section_id }} .comparison-table__label {
+        font-size: 17px;
+      }
+
+      .comparison-table-{{ section_id }} .comparison-table__product {
+        min-height: 230px;
+      }
+
+      .comparison-table-{{ section_id }} .comparison-table__cell {
+        min-height: 150px;
+      }
+    }
+
+    @media screen and (max-width: 749px) {
+      .comparison-table-{{ section_id }} .comparison-table__wrapper {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .comparison-table-{{ section_id }} .comparison-table__grid {
+        overflow-x: auto;
+        grid-template-columns: 220px 220px 220px;
+        border-radius: 22px;
+      }
+
+      .comparison-table-{{ section_id }} .comparison-table__product {
+        min-height: 190px;
+        padding: 24px 14px 18px;
+      }
+
+      .comparison-table-{{ section_id }} .comparison-table__cell {
+        min-height: 128px;
+        padding: 18px 12px;
+      }
+
+      .comparison-table-{{ section_id }} .comparison-table__image-wrap {
+        width: 95px;
+        height: 95px;
+        border-radius: 18px;
+        margin-bottom: 14px;
+      }
+
+      .comparison-table-{{ section_id }} .comparison-table__title {
+        font-size: 16px;
+      }
+
+      .comparison-table-{{ section_id }} .comparison-table__label {
+        font-size: 14px;
+        max-width: 180px;
+      }
+
+      .comparison-table-{{ section_id }} .comparison-table__icon {
+        width: 46px;
+        height: 46px;
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      .comparison-table-{{ section_id }} .comparison-table__badge {
+        font-size: 11px;
+        padding: 9px 12px;
+        border-radius: 10px;
+      }
+    }
+  </style>
+</section>
 
 {% schema %}
 {
-  "name": "Specification table",
-  "class": "shopify-section--specification-table",
-  "tag": "section",
-  "disabled_on": {
-    "groups": ["header", "custom.overlay"]
-  },
+  "name": "Comparison table",
   "settings": [
     {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "Full width",
-      "default": true
-    },
-    {
-      "type": "header",
-      "content": "Content"
+      "type": "image_picker",
+      "id": "featured_image",
+      "label": "Featured product image"
     },
     {
       "type": "text",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "Learn more"
+      "id": "featured_title",
+      "label": "Featured product title",
+      "default": "FITSLEEPS"
     },
     {
       "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "Product specification"
+      "id": "featured_badge",
+      "label": "Featured badge text",
+      "default": "Best"
     },
     {
-      "type": "richtext",
-      "id": "content",
-      "label": "Content",
-      "default": "<p>Showcase specifications about a product to help your customers making an informed decision about their purchase.</p>"
+      "type": "image_picker",
+      "id": "col2_image",
+      "label": "Column 2 image"
     },
     {
       "type": "text",
-      "id": "button_text",
-      "label": "Button text"
+      "id": "col2_title",
+      "label": "Column 2 title",
+      "default": "Phone"
     },
     {
-      "type": "url",
-      "id": "button_url",
-      "label": "Button URL"
+      "type": "image_picker",
+      "id": "col3_image",
+      "label": "Column 3 image"
     },
     {
-      "type": "select",
-      "id": "text_position",
-      "label": "Text position",
-      "options": [
-        {
-          "value": "start",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        }
-      ],
-      "default": "start"
+      "type": "text",
+      "id": "col3_title",
+      "label": "Column 3 title",
+      "default": "Smartwatch"
     },
     {
-      "type": "header",
-      "content": "Table presentation"
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "featured_column_bg",
+      "label": "Featured column background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "featured_row_bg",
+      "label": "Featured rows background",
+      "default": "#f3f3f3"
+    },
+    {
+      "type": "color",
+      "id": "dark_column_gradient_start",
+      "label": "Dark column gradient start",
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "dark_column_gradient_end",
+      "label": "Dark column gradient end",
+      "default": "#1d1d1d"
+    },
+    {
+      "type": "color",
+      "id": "image_box_bg",
+      "label": "Image box background",
+      "default": "#e9e9e9"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "rgba(255,255,255,0.12)"
+    },
+    {
+      "type": "color",
+      "id": "featured_text_color",
+      "label": "Featured text color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "dark_text_color",
+      "label": "Dark columns text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "badge_bg",
+      "label": "Badge background",
+      "default": "#4f9d1d"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Badge text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "featured_icon_bg",
+      "label": "Featured icon background",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "featured_icon_color",
+      "label": "Featured icon color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "yes_icon_bg",
+      "label": "Yes icon background",
+      "default": "#4f7f38"
+    },
+    {
+      "type": "color",
+      "id": "yes_icon_color",
+      "label": "Yes icon color",
+      "default": "#d8ffcb"
+    },
+    {
+      "type": "color",
+      "id": "no_icon_bg",
+      "label": "No icon background",
+      "default": "#8a2525"
+    },
+    {
+      "type": "color",
+      "id": "no_icon_color",
+      "label": "No icon color",
+      "default": "#ffd0d0"
     },
     {
       "type": "range",
-      "id": "max_rows",
-      "min": 1,
-      "max": 100,
-      "label": "Rows revealed by default",
-      "default": 5
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 40
     },
     {
-      "type": "text",
-      "id": "view_all_text",
-      "label": "View all text",
-      "default": "View all"
-    },
-    {
-      "type": "text",
-      "id": "view_less_text",
-      "label": "View less text",
-      "default": "View less"
-    },
-    {
-      "type": "header",
-      "content": "Colors",
-      "info": "Gradient replaces solid colors when set."
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Background"
-    },
-    {
-      "type": "color_background",
-      "id": "background_gradient",
-      "label": "Background gradient"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text"
-    },
-    {
-      "type": "color",
-      "id": "heading_color",
-      "label": "Heading color"
-    },
-    {
-      "type": "color_background",
-      "id": "heading_gradient",
-      "label": "Heading gradient"
-    },
-    {
-      "type": "color",
-      "id": "button_background",
-      "label": "Button background"
-    },
-    {
-      "type": "color",
-      "id": "button_text_color",
-      "label": "Button text"
-    },
-    {
-      "type": "color",
-      "id": "chart_background",
-      "label": "Chart background"
-    },
-    {
-      "type": "color",
-      "id": "chart_text_color",
-      "label": "Chart text"
-    },
-    {
-      "type": "color",
-      "id": "chart_true_false_color",
-      "label": "True/false color"
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 40
     }
   ],
   "blocks": [
     {
-      "name": "Row",
-      "type": "row",
+      "type": "feature_row",
+      "name": "Feature row",
       "settings": [
         {
-          "type": "paragraph",
-          "content": "Row without value are automatically hidden."
-        },
-        {
           "type": "text",
-          "id": "heading",
-          "label": "Heading",
-          "default": "Heading"
+          "id": "label",
+          "label": "Feature text",
+          "default": "USED AS AN ALARM"
         },
         {
-          "type": "richtext",
-          "id": "value",
-          "label": "Value",
-          "default": "<p>Value</p>"
+          "type": "checkbox",
+          "id": "featured_has_check",
+          "label": "Featured column check",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "col2_has_check",
+          "label": "Column 2 check",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "col3_has_check",
+          "label": "Column 3 check",
+          "default": true
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Specification table",
+      "name": "Comparison table",
       "blocks": [
         {
-          "type": "row",
+          "type": "feature_row",
           "settings": {
-            "heading": "Heading 1",
-            "value": "<p>Value 1</p>"
+            "label": "USED AS AN ALARM",
+            "featured_has_check": true,
+            "col2_has_check": true,
+            "col3_has_check": true
           }
         },
         {
-          "type": "row",
+          "type": "feature_row",
           "settings": {
-            "heading": "Heading 2",
-            "value": "<p>Value 2</p>"
+            "label": "RELIABLE FOR PEOPLE WHO OVERSLEEP",
+            "featured_has_check": true,
+            "col2_has_check": false,
+            "col3_has_check": false
           }
         },
         {
-          "type": "row",
+          "type": "feature_row",
           "settings": {
-            "heading": "Heading 3",
-            "value": "<p>Value 3</p>"
+            "label": "14+ DAY BATTERY",
+            "featured_has_check": true,
+            "col2_has_check": false,
+            "col3_has_check": false
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "label": "PARTNER-FRIENDLY / SILENT WAKE-UP",
+            "featured_has_check": true,
+            "col2_has_check": false,
+            "col3_has_check": false
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "label": "100-DAY GUARANTEE",
+            "featured_has_check": true,
+            "col2_has_check": false,
+            "col3_has_check": false
           }
         }
       ]
