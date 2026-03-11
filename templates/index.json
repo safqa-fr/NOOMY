@@ -22,15 +22,15 @@
         "1664424230c4756b0e-2": {
           "type": "richtext",
           "settings": {
-            "content": "<h5>Finally, an alarm that works as hard as you do — silent vibration directly on your wrist</h5>"
+            "content": "<h4>The world's #1 vibrating alarm watch. Wake up silently, never miss a morning and take back control of your day.</h4>"
           }
         },
         "button_KQDUwK": {
           "type": "button",
           "settings": {
             "style": "fill",
-            "size": "lg",
-            "text": "Découvrir NOOMY",
+            "size": "xl",
+            "text": "Shop Now — Free US Shipping",
             "url": "",
             "background": "#2a9d8f",
             "text_color": ""
