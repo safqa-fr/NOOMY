@@ -105,6 +105,7 @@
         "image_djYMyV",
         "image_ECN6cE"
       ],
+      "disabled": true,
       "name": "Slideshow",
       "settings": {
         "full_width": true,
