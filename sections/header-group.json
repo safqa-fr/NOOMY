@@ -56,9 +56,9 @@
     "header": {
       "type": "header",
       "settings": {
-        "enable_sticky": true,
-        "hide_on_scroll": true,
-        "logo_max_width": 120,
+        "enable_sticky": false,
+        "hide_on_scroll": false,
+        "logo_max_width": 40,
         "logo_mobile_max_width": 100,
         "menu": "main-menu",
         "sidebar_menu": "",
