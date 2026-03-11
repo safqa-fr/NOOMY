@@ -249,6 +249,14 @@
             "payment_button_text_color": ""
           }
         },
+        "image_wUYBHy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Securite_livraison_gratuite_garantie_remboursement.png",
+            "alignment": "center",
+            "max_width": 300
+          }
+        },
         "pickup_availability_TNxcJU": {
           "type": "pickup_availability",
           "settings": {}
@@ -267,6 +275,7 @@
         "quantity_selector_brjeaF",
         "liquid_FMmnBy",
         "buy_buttons_rFCQkc",
+        "image_wUYBHy",
         "pickup_availability_TNxcJU"
       ],
       "name": "Featured product",
