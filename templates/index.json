@@ -126,32 +126,32 @@
         "logo_Bghjbf": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Dezeen_logo_svg.png",
-            "logo_width": 120,
+            "logo": "shopify://shop_images/1_7dfd25c6-596a-45fa-b192-0d1733b19d2b.avif",
+            "logo_width": 160,
             "link": ""
           }
         },
         "logo_jdDiF7": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Architectural-Digest-Logo-PNG-Images-HD-thumb.png",
-            "logo_width": 90,
+            "logo": "shopify://shop_images/4_d70d842b-16fd-4d97-af8d-62e1e9fced69.webp",
+            "logo_width": 160,
             "link": ""
           }
         },
         "logo_UVWEa8": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Wallpaper_magazine_logo__2009__svg.png",
-            "logo_width": 230,
+            "logo": "shopify://shop_images/2_170a5cb3-9958-46ec-9c87-6eb0b2efbf0e.webp",
+            "logo_width": 160,
             "link": ""
           }
         },
         "logo_paTtwV": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/IDEAT-Magazin-Germany-1024x381.png",
-            "logo_width": 180,
+            "logo": "shopify://shop_images/3_ec800bac-391e-4323-bc51-bacf85a5fe80.webp",
+            "logo_width": 160,
             "link": ""
           }
         }
@@ -170,13 +170,13 @@
         "content": "",
         "text_alignment": "center",
         "items_per_row": 4,
-        "background": "",
+        "background": "#03060a",
         "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
+        "text_color": "#03060a",
+        "heading_color": "#ffffff",
         "heading_gradient": "",
-        "logo_item_background": "#f1ece6",
-        "logo_item_border": ""
+        "logo_item_background": "#ffffff",
+        "logo_item_border": "#1a1a1a"
       }
     },
     "rich_text_XD6a6n": {
@@ -227,7 +227,7 @@
         "allow_transparent_header": false,
         "enable_parallax": false,
         "image_size": "auto",
-        "image": "shopify://shop_images/Gemini_Generated_Image_nslt56nslt56nslt.png",
+        "image": "shopify://shop_images/Gemini_Generated_Image_aj4bgqaj4bgqaj4b.png",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
         "text_color": "#ffffff",
