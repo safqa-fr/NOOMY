@@ -16,13 +16,13 @@
           "type": "heading",
           "settings": {
             "text": "Wake Up. Every Time.",
-            "heading_tag": "h1"
+            "heading_tag": "h2"
           }
         },
         "1664424230c4756b0e-2": {
           "type": "richtext",
           "settings": {
-            "content": "<h4>Finally, an alarm that works as hard as you do — silent vibration directly on your wrist</h4>"
+            "content": "<h5>Finally, an alarm that works as hard as you do — silent vibration directly on your wrist</h5>"
           }
         },
         "button_KQDUwK": {
@@ -48,7 +48,7 @@
         "enable_parallax": false,
         "image_size": "auto",
         "image": "shopify://shop_images/ChatGPT_Image_11_mars_2026_22_26_57.png",
-        "mobile_image": "shopify://shop_images/ChatGPT_Image_11_mars_2026_22_00_51.png",
+        "mobile_image": "shopify://shop_images/ChatGPT_Image_11_mars_2026_22_28_38.png",
         "mobile_text_position": "place-self-end-center text-center",
         "desktop_text_position": "sm:place-self-end-center sm:text-center",
         "text_color": "#ffffff",
