@@ -172,7 +172,7 @@
       ],
       "name": "Logo carousel",
       "settings": {
-        "bg_color": "#ffffff",
+        "bg_color": "#fafaf8",
         "section_height": 90,
         "carousel_width": 100,
         "speed": 30,
