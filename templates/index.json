@@ -125,6 +125,32 @@
         "gap": 40
       }
     },
+    "rich_text_647zrN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gKyL8P": {
+          "type": "heading",
+          "settings": {
+            "text": "Why choose ?",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_gKyL8P"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "image_with_text_overlay_ULrJMg": {
       "type": "image-with-text-overlay",
       "name": "Image with text overlay",
@@ -457,6 +483,7 @@
   "order": [
     "image-with-text-overlay",
     "logo_list_h49dDB",
+    "rich_text_647zrN",
     "image_with_text_overlay_ULrJMg",
     "featured_product_6EHHGX",
     "tabs_y8zmfe",
