@@ -168,82 +168,6 @@
         "overlay_opacity": 0
       }
     },
-    "multi_column_Hrw3Qt": {
-      "type": "multi-column",
-      "blocks": {
-        "item_nn8apK": {
-          "type": "item",
-          "settings": {
-            "video": "shopify://files/videos/abd8be0511fd46b3997d0daa12ef6057.mov",
-            "column_size": "4",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_433mDB": {
-          "type": "item",
-          "settings": {
-            "video": "shopify://files/videos/Video_2 (1).mp4",
-            "column_size": "4",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_Gfz4PA": {
-          "type": "item",
-          "settings": {
-            "video": "shopify://files/videos/803611a50e724797995fa06cc05b9c39.mov",
-            "column_size": "4",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_PKxN4w": {
-          "type": "item",
-          "settings": {
-            "video": "shopify://files/videos/4b502b23a3264253a5f263ce02c02fd9.mov",
-            "column_size": "4",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "item_nn8apK",
-        "item_433mDB",
-        "item_Gfz4PA",
-        "item_PKxN4w"
-      ],
-      "name": "Multi-column",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "gap": "medium",
-        "text_alignment": "start",
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "featured_product_6EHHGX": {
       "type": "featured-product",
       "blocks": {
@@ -430,20 +354,14 @@
         "heading_gradient": ""
       }
     },
-    "multi_column_JL6E84": {
+    "multi_column_Hrw3Qt": {
       "type": "multi-column",
       "blocks": {
-        "spacer_EAPALx": {
-          "type": "spacer",
-          "settings": {
-            "column_size": "6"
-          }
-        },
-        "item_7pkjVR": {
+        "item_nn8apK": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/0a4acb0d57294360a90023f45de428fc.HD-720p-4.5Mbps-59886218.mp4",
-            "column_size": "3",
+            "video": "shopify://files/videos/abd8be0511fd46b3997d0daa12ef6057.mov",
+            "column_size": "4",
             "title": "",
             "heading_tag": "h4",
             "content": "",
@@ -452,64 +370,37 @@
             "link_style": "link"
           }
         },
-        "item_qeMAqq": {
+        "item_433mDB": {
           "type": "item",
           "settings": {
-            "column_size": "3",
-            "title": "Powerful Enough to Wake You. Silent to Everyone Else.",
+            "video": "shopify://files/videos/Video_2 (1).mp4",
+            "column_size": "4",
+            "title": "",
             "heading_tag": "h4",
-            "content": "<p>Rise Band wakes you with powerful wrist vibrations - <strong>3X stronger than smartwatches</strong>, yet localized to your wrist so it's completely silent to everyone else.</p><p>No more bed shakers waking your partner. No more weak smartwatches you sleep through. No more depending on others.</p><p><strong>Just reliable wake-ups, every single time - without guilt, without anxiety.</strong></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "spacer_EAPALx",
-        "item_7pkjVR",
-        "item_qeMAqq"
-      ],
-      "name": "Multi-column",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "gap": "medium",
-        "text_alignment": "center",
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "multi_column_MUd6J9": {
-      "type": "multi-column",
-      "blocks": {
-        "spacer_w7xWzj": {
-          "type": "spacer",
-          "settings": {
-            "column_size": "6"
-          }
-        },
-        "item_MjYXML": {
-          "type": "item",
-          "settings": {
-            "column_size": "3",
-            "title": "How it works",
-            "heading_tag": "h4",
-            "content": "<p>You put the wristband on before you go to sleep and easily set the alarm clock. When the alarm clock goes off, you turn it off and put the wristband back on your nightstand.</p>",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
           }
         },
-        "item_RTdzPi": {
+        "item_Gfz4PA": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/5c2b429a8a584077ba2032b79129516d.HD-720p-4.5Mbps-59886328.mp4",
-            "column_size": "3",
+            "video": "shopify://files/videos/803611a50e724797995fa06cc05b9c39.mov",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_PKxN4w": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/4b502b23a3264253a5f263ce02c02fd9.mov",
+            "column_size": "4",
             "title": "",
             "heading_tag": "h4",
             "content": "",
@@ -520,16 +411,17 @@
         }
       },
       "block_order": [
-        "spacer_w7xWzj",
-        "item_MjYXML",
-        "item_RTdzPi"
+        "item_nn8apK",
+        "item_433mDB",
+        "item_Gfz4PA",
+        "item_PKxN4w"
       ],
       "name": "Multi-column",
       "settings": {
         "full_width": true,
         "stack_on_mobile": false,
         "gap": "medium",
-        "text_alignment": "center",
+        "text_alignment": "start",
         "subheading": "",
         "title": "",
         "content": "",
@@ -541,6 +433,27 @@
     "faq_EQx4Dx": {
       "type": "faq",
       "blocks": {
+        "item_mdUazb": {
+          "type": "item",
+          "settings": {
+            "title": "How long does the battery last?",
+            "content": "<p>The NOM DU PRODUIT alarm clock battery lasts over 14 days on a single charge, depending on usage, with fast and easy charging via our USB plug. The Pro version offers even more, lasting up to 20 days on a single charge.<br/><br/></p>"
+          }
+        },
+        "item_qxrEUn": {
+          "type": "item",
+          "settings": {
+            "title": "Isn’t this just like any smartwatch?",
+            "content": "<p>While smartwatches offer many features, the NOM DU PRODUIT Alarm Clock is specifically designed to help you wake up, not track fitness or show notifications. Unlike most smartwatches, it provides a strong, gradually increasing vibration tailored for heavy sleepers. With a long-lasting battery of 14+ days, it’s built for sleep, so you won’t even feel it when you wear it. This ensures you wake up effectively without disturbing others, making it a unique solution for a peaceful and powerful start to your day.<br/></p>"
+          }
+        },
+        "item_gK7xhF": {
+          "type": "item",
+          "settings": {
+            "title": "I always sleep through alarm clocks. Will this wake me up?",
+            "content": "<p>Yes! Vibration, especially on the wrist, is a much more effective way to stimulate the brain and wake you up compared to sound alone. This alarm is designed specifically for heavy sleepers who struggle with traditional sound alarms or wake-up lights. The strong vibration gradually increases, ensuring you wake up, even from the deepest sleep. Tested by over 500 deep sleepers, 99% reported waking up on time during a 50-day trial. Many people have found this solution to be the key to finally waking up on time!<br/></p>"
+          }
+        },
         "item_rLWVGx": {
           "type": "item",
           "settings": {
@@ -564,6 +477,9 @@
         }
       },
       "block_order": [
+        "item_mdUazb",
+        "item_qxrEUn",
+        "item_gK7xhF",
         "item_rLWVGx",
         "item_zBKaJM",
         "item_JqHXzE"
@@ -589,22 +505,6 @@
         "button_text_color": "",
         "accordion_background": "",
         "accordion_text_color": ""
-      }
-    },
-    "images_with_text_scrolling_cNiDgb": {
-      "type": "images-with-text-scrolling",
-      "name": "Images and text scrolling",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "show_counter": true,
-        "desktop_image_effect": "reveal",
-        "image_position": "end",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
       }
     },
     "contact_ApggHV": {
@@ -634,13 +534,10 @@
     "logo_list_h49dDB",
     "rich_text_647zrN",
     "image_with_text_overlay_ULrJMg",
-    "multi_column_Hrw3Qt",
     "featured_product_6EHHGX",
     "tabs_y8zmfe",
-    "multi_column_JL6E84",
-    "multi_column_MUd6J9",
+    "multi_column_Hrw3Qt",
     "faq_EQx4Dx",
-    "images_with_text_scrolling_cNiDgb",
     "contact_ApggHV"
   ]
 }
