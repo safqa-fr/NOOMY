@@ -22,7 +22,7 @@
     "error_color": "#c94a3a",
     "header_background": "#ffffff",
     "header_text_color": "#000000",
-    "footer_background": "#1a1a2e",
+    "footer_background": "#000000",
     "footer_text_color": "#ffffff",
     "dialog_background": "#1a1a2e",
     "primary_button_background": "#e76f51",
