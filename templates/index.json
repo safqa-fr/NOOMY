@@ -160,6 +160,7 @@
         "item_PKxN4w": {
           "type": "item",
           "settings": {
+            "video": "shopify://files/videos/4b502b23a3264253a5f263ce02c02fd9.mov",
             "column_size": "4",
             "title": "Column title",
             "heading_tag": "h4",
