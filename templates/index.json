@@ -505,7 +505,7 @@
       "name": "Multi-column",
       "settings": {
         "full_width": true,
-        "stack_on_mobile": false,
+        "stack_on_mobile": true,
         "gap": "medium",
         "text_alignment": "start",
         "subheading": "",
@@ -525,18 +525,6 @@
             "column_size": "6"
           }
         },
-        "item_Nwmakw": {
-          "type": "item",
-          "settings": {
-            "column_size": "3",
-            "title": "How it works",
-            "heading_tag": "h4",
-            "content": "<p>You put the wristband on before you go to sleep and easily set the alarm clock. When the alarm clock goes off, you turn it off and put the wristband back on your nightstand.<br/><br/></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
         "item_ErJDTb": {
           "type": "item",
           "settings": {
@@ -549,17 +537,29 @@
             "link_text": "",
             "link_style": "link"
           }
+        },
+        "item_Nwmakw": {
+          "type": "item",
+          "settings": {
+            "column_size": "3",
+            "title": "How it works",
+            "heading_tag": "h4",
+            "content": "<p>You put the wristband on before you go to sleep and easily set the alarm clock. When the alarm clock goes off, you turn it off and put the wristband back on your nightstand.<br/><br/></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
         }
       },
       "block_order": [
         "spacer_LFypEL",
-        "item_Nwmakw",
-        "item_ErJDTb"
+        "item_ErJDTb",
+        "item_Nwmakw"
       ],
       "name": "Multi-column",
       "settings": {
         "full_width": true,
-        "stack_on_mobile": false,
+        "stack_on_mobile": true,
         "gap": "medium",
         "text_alignment": "start",
         "subheading": "",
