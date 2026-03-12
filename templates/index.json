@@ -652,7 +652,7 @@
       "name": "Wake comparison",
       "settings": {
         "full_width": true,
-        "heading_prefix": "Why you have to choose",
+        "heading_prefix": "",
         "heading_highlight": "POPWATCH",
         "subtext": "<p><strong>POPWATCH</strong> is the ideal solution for a reliable wake-up, noise-free and stress-free..</p>",
         "button_label": "I wake up with POPWATCH",
@@ -673,12 +673,12 @@
         "padding_bottom_mobile": 32,
         "bg_color": "#ffffff",
         "text_color": "#111111",
-        "border_color": "#181818",
-        "highlight_bg": "#000000",
-        "highlight_text": "#ffffff",
-        "check_color": "#a7e0b0",
+        "border_color": "#000000",
+        "highlight_bg": "#e5e5e5",
+        "highlight_text": "#000000",
+        "check_color": "#4caf50",
         "cross_color": "#ff0000",
-        "button_bg": "#000000",
+        "button_bg": "#2a9d8f",
         "button_text": "#ffffff",
         "icon_border": "#111111"
       }
