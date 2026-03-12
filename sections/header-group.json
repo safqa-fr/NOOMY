@@ -17,7 +17,7 @@
         "message_zYPrze": {
           "type": "message",
           "settings": {
-            "text": "🔥 Flash Sale — 30% Off While Stocks Last 🔥",
+            "text": "Flash Sale — 30% Off While Stocks Last",
             "url": ""
           }
         },
@@ -54,7 +54,7 @@
         "autoplay": false,
         "cycle_speed": 6,
         "text_size": "text-base",
-        "navigation_mode": "scrolling",
+        "navigation_mode": "arrows",
         "scrolling_speed": 10,
         "background": "#1e1d1d",
         "background_gradient": "",
