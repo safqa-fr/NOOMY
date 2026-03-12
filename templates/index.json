@@ -554,25 +554,25 @@
         "feature_qXNpWi": {
           "type": "feature",
           "settings": {
-            "text": "Réveil silencieux"
+            "text": "Silent alarm"
           }
         },
         "feature_xy74dL": {
           "type": "feature",
           "settings": {
-            "text": "Confort absolu"
+            "text": "Absolute comfort"
           }
         },
         "feature_RjcXtn": {
           "type": "feature",
           "settings": {
-            "text": "Vibration douce"
+            "text": "Gentle vibration"
           }
         },
         "feature_FRzdpf": {
           "type": "feature",
           "settings": {
-            "text": "Réveil garanti"
+            "text": "Guaranteed wake-up"
           }
         },
         "row_Rwtxib": {
@@ -630,10 +630,10 @@
       "name": "Wake comparison",
       "settings": {
         "full_width": true,
-        "heading_prefix": "Pourquoi vous devez choisir",
-        "heading_highlight": "WAKE",
-        "subtext": "<p><strong>WAKE</strong> est la solution idéale pour un réveil fiable, sans bruit et sans stress...</p>",
-        "button_label": "Je me réveille avec\nWAKE",
+        "heading_prefix": "Why you have to choose",
+        "heading_highlight": "POPWATCH",
+        "subtext": "<p><strong>POPWATCH</strong> is the ideal solution for a reliable wake-up, noise-free and stress-free..</p>",
+        "button_label": "I wake up with POPWATCH",
         "button_link": "",
         "col_1_heading": "POPWATCH",
         "col_2_heading": "PHONE & SMARTWATCH",
