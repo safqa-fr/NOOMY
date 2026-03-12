@@ -22,7 +22,7 @@
   #{{ section_id }} .wake-comparison__inner {
     max-width: {% if section.settings.full_width %}100%{% else %}1400px{% endif %};
     margin: 0 auto;
-    padding: {{ section.settings.padding_top }}px {{ section.settings.padding_horizontal }}px {{ section.settings.padding_bottom }}px;
+    padding: {{ section.settings.padding_top | minus: 30 }}px {{ section.settings.padding_horizontal }}px {{ section.settings.padding_bottom | minus: 30 }}px;
   }
 
   #{{ section_id }} .wake-comparison__grid {
@@ -233,7 +233,7 @@
 
   @media screen and (max-width: 768px) {
     #{{ section_id }} .wake-comparison__inner {
-      padding: {{ section.settings.padding_top_mobile }}px 14px {{ section.settings.padding_bottom_mobile }}px;
+      padding: {{ section.settings.padding_top_mobile | minus: 15 }}px 14px {{ section.settings.padding_bottom_mobile | minus: 15 }}px;
     }
 
     #{{ section_id }} .wake-comparison__grid {
