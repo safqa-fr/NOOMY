@@ -473,6 +473,56 @@
         "text_color": ""
       }
     },
+    "images_with_text_scrolling_qzrbNa": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_WqkT7Q": {
+          "type": "item",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/0a4acb0d57294360a90023f45de428fc.HD-720p-4.5Mbps-59886218.mp4",
+            "enable_autoplay": true,
+            "enable_loop": true,
+            "show_controls": false,
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Powerful Enough to Wake You. Silent to Everyone Else.",
+            "content": "<p>Rise Band wakes you with powerful wrist vibrations - <strong>3X stronger than smartwatches</strong>, yet localized to your wrist so it's completely silent to everyone else.</p><p>No more bed shakers waking your partner. No more weak smartwatches you sleep through. No more depending on others.</p><p><strong>Just reliable wake-ups, every single time - without guilt, without anxiety.</strong></p>"
+          }
+        },
+        "item_QTx9qn": {
+          "type": "item",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/5c2b429a8a584077ba2032b79129516d.HD-720p-4.5Mbps-59886328.mp4",
+            "enable_autoplay": true,
+            "enable_loop": true,
+            "show_controls": false,
+            "icon": "none",
+            "icon_width": 48,
+            "title": "How it works",
+            "content": "<p>You put the wristband on before you go to sleep and easily set the alarm clock. When the alarm clock goes off, you turn it off and put the wristband back on your nightstand.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_WqkT7Q",
+        "item_QTx9qn"
+      ],
+      "name": "Images and text scrolling",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "show_counter": true,
+        "desktop_image_effect": "reveal",
+        "image_position": "end",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "multi_column_tg6hXk": {
       "type": "multi-column",
       "blocks": {
@@ -520,6 +570,7 @@
         "item_Nwmakw",
         "spacer_cr7bnm"
       ],
+      "disabled": true,
       "name": "Multi-column",
       "settings": {
         "full_width": true,
@@ -862,56 +913,6 @@
         "button_background": "",
         "button_text_color": ""
       }
-    },
-    "images_with_text_scrolling_qzrbNa": {
-      "type": "images-with-text-scrolling",
-      "blocks": {
-        "item_WqkT7Q": {
-          "type": "item",
-          "settings": {
-            "media_type": "video",
-            "video": "shopify://files/videos/0a4acb0d57294360a90023f45de428fc.HD-720p-4.5Mbps-59886218.mp4",
-            "enable_autoplay": true,
-            "enable_loop": true,
-            "show_controls": false,
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Powerful Enough to Wake You. Silent to Everyone Else.",
-            "content": "<p>Rise Band wakes you with powerful wrist vibrations - <strong>3X stronger than smartwatches</strong>, yet localized to your wrist so it's completely silent to everyone else.</p><p>No more bed shakers waking your partner. No more weak smartwatches you sleep through. No more depending on others.</p><p><strong>Just reliable wake-ups, every single time - without guilt, without anxiety.</strong></p>"
-          }
-        },
-        "item_QTx9qn": {
-          "type": "item",
-          "settings": {
-            "media_type": "video",
-            "video": "shopify://files/videos/5c2b429a8a584077ba2032b79129516d.HD-720p-4.5Mbps-59886328.mp4",
-            "enable_autoplay": true,
-            "enable_loop": true,
-            "show_controls": false,
-            "icon": "none",
-            "icon_width": 48,
-            "title": "How it works",
-            "content": "<p>You put the wristband on before you go to sleep and easily set the alarm clock. When the alarm clock goes off, you turn it off and put the wristband back on your nightstand.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_WqkT7Q",
-        "item_QTx9qn"
-      ],
-      "name": "Images and text scrolling",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "show_counter": true,
-        "desktop_image_effect": "reveal",
-        "image_position": "end",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
-      }
     }
   },
   "order": [
@@ -923,12 +924,12 @@
     "multi_column_Hrw3Qt",
     "featured_product_6EHHGX",
     "multi_column_LkzPEJ",
+    "images_with_text_scrolling_qzrbNa",
     "multi_column_tg6hXk",
     "wake_comparison_tXUY7j",
     "1773344751701ab9d2",
     "tabs_y8zmfe",
     "faq_EQx4Dx",
-    "contact_ApggHV",
-    "images_with_text_scrolling_qzrbNa"
+    "contact_ApggHV"
   ]
 }
