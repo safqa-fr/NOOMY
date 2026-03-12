@@ -656,7 +656,7 @@
         "highlight_bg": "#000000",
         "highlight_text": "#FFFFFF",
         "check_color": "#A7E0B0",
-        "cross_color": "#F28AA0",
+        "cross_color": "#ff0000",
         "button_bg": "#000000",
         "button_text": "#FFFFFF",
         "icon_border": "#111111"
