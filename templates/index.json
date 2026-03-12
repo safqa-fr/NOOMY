@@ -702,6 +702,14 @@
     "tabs_y8zmfe": {
       "type": "tabs",
       "blocks": {
+        "tab_VJjQrM": {
+          "type": "tab",
+          "settings": {
+            "title": "Who is PopWatch for ?",
+            "content": "<p>PopWatch is built for you if…</p><p>You're a <strong>heavy sleeper</strong> who's tried everything and still oversleeps.<br/>You hit <strong>snooze 5 times</strong> without even realizing it.<br/>You sleep with a <strong>partner</strong> and don't want to wake them up.<br/>You work <strong>early shifts</strong> and need a wake-up you can actually trust.<br/>You're <strong>deaf or hard of hearing</strong> and need more than sound.<br/>You have <strong>ADHD</strong> and mornings are your hardest battle.<br/>You want your <strong>phone out of the bedroom</strong> for better sleep.</p>",
+            "page": ""
+          }
+        },
         "tab_iGicC7": {
           "type": "tab",
           "settings": {
@@ -736,6 +744,7 @@
         }
       },
       "block_order": [
+        "tab_VJjQrM",
         "tab_iGicC7",
         "tab_YhqfJE",
         "tab_ndPB4f",
