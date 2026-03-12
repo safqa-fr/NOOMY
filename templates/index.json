@@ -131,7 +131,7 @@
         "richtext_xLVXM9": {
           "type": "richtext",
           "settings": {
-            "content": "<h1><em>Why choose </em><strong>POPWATCH</strong>?</h1>"
+            "content": "<h3><em>Why choose </em><strong>POPWATCH</strong>?</h3>"
           }
         },
         "heading_gKyL8P": {
@@ -182,14 +182,14 @@
         "richtext_gFWHri": {
           "type": "richtext",
           "settings": {
-            "content": "<h1><em>Don't take our word for it.</em></h1>"
+            "content": "<h3><em>Don't take our word for it.</em></h3>"
           }
         },
         "heading_aQ6bFn": {
           "type": "heading",
           "settings": {
-            "text": "⭐⭐⭐⭐⭐  4.9/5 based on 10,000+ reviews",
-            "heading_tag": "h5",
+            "text": "⭐⭐⭐⭐⭐  4.9/5 based on 1,000+ reviews",
+            "heading_tag": "h6",
             "text_color": "",
             "gradient": ""
           }
@@ -671,7 +671,7 @@
         "text_color_custom": "#111111",
         "button_label": "I wake up with POPWATCH",
         "button_link": "shopify://products/noomy-aura",
-        "col_1_heading": "WAKE",
+        "col_1_heading": "POPWATCH",
         "col_2_heading": "PHONE & SMARTWATCH",
         "heading_size": 62,
         "text_size": 18,
