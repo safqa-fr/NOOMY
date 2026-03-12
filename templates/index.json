@@ -513,7 +513,9 @@
       "name": "Images and text scrolling",
       "settings": {
         "full_width": true,
-        "stack_on_mobile": false,
+        "stack_on_mobile": true,
+        "mobile_media_position": "media_first",
+        "heading_size": 26,
         "show_counter": true,
         "desktop_image_effect": "reveal",
         "image_position": "end",
