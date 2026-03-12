@@ -318,8 +318,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/2026_23_28_18.png",
-            "alignment": "center",
-            "max_width": 350
+            "alignment": "start",
+            "max_width": 400
           }
         },
         "separator_fzkBLi": {
@@ -583,119 +583,8 @@
     },
     "wake_comparison_tXUY7j": {
       "type": "wake-comparison",
-      "blocks": {
-        "feature_qXNpWi": {
-          "type": "feature",
-          "settings": {
-            "text": "Silent alarm"
-          }
-        },
-        "feature_xy74dL": {
-          "type": "feature",
-          "settings": {
-            "text": "Absolute comfort"
-          }
-        },
-        "feature_RjcXtn": {
-          "type": "feature",
-          "settings": {
-            "text": "Gentle vibration"
-          }
-        },
-        "feature_FRzdpf": {
-          "type": "feature",
-          "settings": {
-            "text": "Guaranteed wake-up"
-          }
-        },
-        "row_Rwtxib": {
-          "type": "row",
-          "settings": {
-            "label": "USED AS AN ALARM",
-            "col_1_value": "check",
-            "col_2_value": "cross"
-          }
-        },
-        "row_NVQWrM": {
-          "type": "row",
-          "settings": {
-            "label": "Reliable for people who oversleep",
-            "col_1_value": "check",
-            "col_2_value": "cross"
-          }
-        },
-        "row_cGFk8M": {
-          "type": "row",
-          "settings": {
-            "label": "14+ DAY BATTERY",
-            "col_1_value": "check",
-            "col_2_value": "cross"
-          }
-        },
-        "row_gLKeRD": {
-          "type": "row",
-          "settings": {
-            "label": "Partner-Friendly / Silent Wake-Up",
-            "col_1_value": "check",
-            "col_2_value": "cross"
-          }
-        },
-        "row_FKGJnY": {
-          "type": "row",
-          "settings": {
-            "label": "100-DAY GUARANTEE",
-            "col_1_value": "check",
-            "col_2_value": "cross"
-          }
-        }
-      },
-      "block_order": [
-        "feature_qXNpWi",
-        "feature_xy74dL",
-        "feature_RjcXtn",
-        "feature_FRzdpf",
-        "row_Rwtxib",
-        "row_NVQWrM",
-        "row_cGFk8M",
-        "row_gLKeRD",
-        "row_FKGJnY"
-      ],
       "name": "Wake comparison",
-      "settings": {
-        "full_width": true,
-        "heading_prefix": "What makes the difference with",
-        "heading_highlight": "POPWATCH?",
-        "heading_color_1": "#111111",
-        "heading_color_2": "#2a9d8f",
-        "subtext": "<p><strong>POPWATCH</strong> is the ideal solution for a reliable wake-up, noise-free and stress-free..</p>",
-        "text_color_custom": "#111111",
-        "button_label": "I wake up with POPWATCH",
-        "button_link": "",
-        "col_1_heading": "POPWATCH",
-        "col_2_heading": "PHONE & SMARTWATCH",
-        "heading_size": 62,
-        "text_size": 18,
-        "feature_text_size": 21,
-        "button_text_size": 19,
-        "table_head_size": 18,
-        "table_label_size": 18,
-        "table_radius": 22,
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "padding_horizontal": 40,
-        "padding_top_mobile": 32,
-        "padding_bottom_mobile": 32,
-        "bg_color": "#ffffff",
-        "text_color": "#111111",
-        "border_color": "#000000",
-        "highlight_bg": "#e5e5e5",
-        "highlight_text": "#000000",
-        "check_color": "#4caf50",
-        "cross_color": "#ff0000",
-        "button_bg": "#2a9d8f",
-        "button_text": "#ffffff",
-        "icon_border": "#111111"
-      }
+      "settings": {}
     },
     "1773344751701ab9d2": {
       "type": "apps",
