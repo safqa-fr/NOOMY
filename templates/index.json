@@ -611,7 +611,7 @@
         "row_Xh4xb8": {
           "type": "row",
           "settings": {
-            "label": "Silent alarm",
+            "label": "USED AS AN ALARME",
             "col_1_value": "check",
             "col_2_value": "cross"
           }
@@ -619,7 +619,7 @@
         "row_RTEqJR": {
           "type": "row",
           "settings": {
-            "label": "Absolute comfort",
+            "label": "Reliable for people who oversleep",
             "col_1_value": "check",
             "col_2_value": "cross"
           }
@@ -627,12 +627,20 @@
         "row_9FJt6J": {
           "type": "row",
           "settings": {
-            "label": "Réveil doux & efficace",
+            "label": "14+ DAY BATTERY",
             "col_1_value": "check",
             "col_2_value": "cross"
           }
         },
         "row_Epgh8W": {
+          "type": "row",
+          "settings": {
+            "label": "Partner-Friendly / Silent Wake-Up",
+            "col_1_value": "check",
+            "col_2_value": "cross"
+          }
+        },
+        "row_AXzc8E": {
           "type": "row",
           "settings": {
             "label": "Réveil doux & efficace",
@@ -649,7 +657,8 @@
         "row_Xh4xb8",
         "row_RTEqJR",
         "row_9FJt6J",
-        "row_Epgh8W"
+        "row_Epgh8W",
+        "row_AXzc8E"
       ],
       "name": "Wake comparison",
       "settings": {
@@ -681,7 +690,7 @@
         "border_color": "#181818",
         "highlight_bg": "#e5e5e5",
         "highlight_text": "#000000",
-        "check_color": "#36e94b",
+        "check_color": "#249b3a",
         "cross_color": "#f20000",
         "button_bg": "#2a9d8f",
         "button_text": "#ffffff",
