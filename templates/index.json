@@ -548,47 +548,6 @@
         "text_color": ""
       }
     },
-    "multi_column_8ALiCG": {
-      "type": "multi-column",
-      "blocks": {
-        "spacer_RENHpW": {
-          "type": "spacer",
-          "settings": {
-            "column_size": "4"
-          }
-        },
-        "item_ghjkR6": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Design_sans_titre_11.png",
-            "column_size": "2",
-            "title": "",
-            "heading_tag": "h4",
-            "content": "<p><br/></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "spacer_RENHpW",
-        "item_ghjkR6"
-      ],
-      "name": "Multi-column",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "gap": "medium",
-        "text_alignment": "start",
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "faq_EQx4Dx": {
       "type": "faq",
       "blocks": {
@@ -699,7 +658,6 @@
     "tabs_y8zmfe",
     "multi_column_LkzPEJ",
     "multi_column_tg6hXk",
-    "multi_column_8ALiCG",
     "faq_EQx4Dx",
     "contact_ApggHV"
   ]
