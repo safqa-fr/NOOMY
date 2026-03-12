@@ -176,7 +176,7 @@
         "links": {
           "type": "links",
           "settings": {
-            "menu": "footer",
+            "menu": "useful-link",
             "show_menu_title": true,
             "menu_title": ""
           }
