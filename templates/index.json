@@ -179,17 +179,24 @@
     "rich_text_YY3PGx": {
       "type": "rich-text",
       "blocks": {
+        "richtext_gFWHri": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h1><em>Don't take our word for it.</em></h1>"
+          }
+        },
         "heading_aQ6bFn": {
           "type": "heading",
           "settings": {
-            "text": "They say it better than we do",
-            "heading_tag": "h1",
+            "text": "⭐⭐⭐⭐⭐  4.9/5 based on 10,000+ reviews",
+            "heading_tag": "h5",
             "text_color": "",
             "gradient": ""
           }
         }
       },
       "block_order": [
+        "richtext_gFWHri",
         "heading_aQ6bFn"
       ],
       "name": "Rich text",
