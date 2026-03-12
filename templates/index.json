@@ -584,6 +584,46 @@
     "wake_comparison_tXUY7j": {
       "type": "wake-comparison",
       "blocks": {
+        "feature_3XLDi7": {
+          "type": "feature",
+          "settings": {
+            "text": "Silent alarm"
+          }
+        },
+        "feature_jcXeA4": {
+          "type": "feature",
+          "settings": {
+            "text": "Absolute comfort"
+          }
+        },
+        "feature_npUUCf": {
+          "type": "feature",
+          "settings": {
+            "text": "Gentle vibration"
+          }
+        },
+        "feature_wwmMHR": {
+          "type": "feature",
+          "settings": {
+            "text": "Guaranteed wake-up"
+          }
+        },
+        "row_Xh4xb8": {
+          "type": "row",
+          "settings": {
+            "label": "Silent alarm",
+            "col_1_value": "check",
+            "col_2_value": "cross"
+          }
+        },
+        "row_RTEqJR": {
+          "type": "row",
+          "settings": {
+            "label": "Absolute comfort",
+            "col_1_value": "check",
+            "col_2_value": "cross"
+          }
+        },
         "row_9FJt6J": {
           "type": "row",
           "settings": {
@@ -602,6 +642,12 @@
         }
       },
       "block_order": [
+        "feature_3XLDi7",
+        "feature_jcXeA4",
+        "feature_npUUCf",
+        "feature_wwmMHR",
+        "row_Xh4xb8",
+        "row_RTEqJR",
         "row_9FJt6J",
         "row_Epgh8W"
       ],
@@ -612,9 +658,9 @@
         "heading_highlight": "POPWATCH?",
         "heading_color_1": "#000000",
         "heading_color_2": "#2a9d8f",
-        "subtext": "<p><strong>WAKE</strong> est la solution idéale pour un réveil fiable, sans bruit et sans stress...</p>",
+        "subtext": "<p><strong>POPWATCH</strong> is the ideal solution for a reliable wake-up, noise-free and stress-free...</p>",
         "text_color_custom": "#111111",
-        "button_label": "Je me réveille avec WAKE",
+        "button_label": "I wake up with POPWATCH",
         "button_link": "",
         "col_1_heading": "WAKE",
         "col_2_heading": "Les autres alarmes",
@@ -633,11 +679,11 @@
         "bg_color": "rgba(0,0,0,0)",
         "text_color": "#111111",
         "border_color": "#181818",
-        "highlight_bg": "#000000",
-        "highlight_text": "#ffffff",
-        "check_color": "#b8f0c7",
-        "cross_color": "#f59ab0",
-        "button_bg": "#000000",
+        "highlight_bg": "#e5e5e5",
+        "highlight_text": "#000000",
+        "check_color": "#36e94b",
+        "cross_color": "#f20000",
+        "button_bg": "#2a9d8f",
         "button_text": "#ffffff",
         "icon_border": "#111111"
       }
