@@ -184,8 +184,8 @@
         "text": {
           "type": "text",
           "settings": {
-            "title": "About",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
+            "title": "Contact Us",
+            "content": "<p><strong>Customer Service:</strong><br/><a>hello@myskineo.com</a></p><p><strong>Business Hours:</strong><br/>Monday to Friday: 9:00 a.m. – 12:00 p.m. and 2:00 p.m. – 6:00 p.m.<br/>Saturday and Sunday: 10:00 a.m. – 12:00 p.m.</p>",
             "enable_follow_on_shop": true
           }
         }
