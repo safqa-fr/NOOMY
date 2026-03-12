@@ -6,7 +6,6 @@
   #{{ section_id }} {
     --bg: {{ section.settings.bg_color }};
     --text: {{ section.settings.text_color }};
-    --muted: {{ section.settings.muted_color }};
     --border: {{ section.settings.border_color }};
     --highlight-bg: {{ section.settings.highlight_bg }};
     --highlight-text: {{ section.settings.highlight_text }};
@@ -23,10 +22,7 @@
   #{{ section_id }} .wake-comparison__inner {
     max-width: {% if section.settings.full_width %}100%{% else %}1400px{% endif %};
     margin: 0 auto;
-    padding:
-      {{ section.settings.padding_top }}px
-      {{ section.settings.padding_horizontal }}px
-      {{ section.settings.padding_bottom }}px;
+    padding: {{ section.settings.padding_top }}px {{ section.settings.padding_horizontal }}px {{ section.settings.padding_bottom }}px;
   }
 
   #{{ section_id }} .wake-comparison__grid {
@@ -63,8 +59,7 @@
     margin: 0 0 40px;
     color: var(--text);
     font-size: {{ section.settings.text_size }}px;
-    line-height: 1.6;
-    opacity: 0.95;
+    line-height: 1.45;
     max-width: 680px;
   }
 
@@ -135,6 +130,10 @@
     opacity: 0.92;
   }
 
+  #{{ section_id }} .wake-comparison__button--mobile {
+    display: none;
+  }
+
   #{{ section_id }} .wake-comparison__table-wrap {
     width: 100%;
   }
@@ -175,11 +174,16 @@
     border-right: 1px solid var(--border);
   }
 
+  #{{ section_id }} .wake-comparison__head > div:first-child {
+    background: transparent;
+  }
+
   #{{ section_id }} .wake-comparison__head-label {
     justify-content: center;
     text-align: center;
     font-size: {{ section.settings.table_head_size }}px;
     font-weight: 800;
+    line-height: 1.1;
   }
 
   #{{ section_id }} .wake-comparison__head-label--highlight,
@@ -190,7 +194,7 @@
 
   #{{ section_id }} .wake-comparison__label {
     font-size: {{ section.settings.table_label_size }}px;
-    line-height: 1.1;
+    line-height: 1.05;
     font-weight: 700;
     color: var(--text);
   }
@@ -228,91 +232,96 @@
 
   @media screen and (max-width: 768px) {
     #{{ section_id }} .wake-comparison__inner {
-      padding:
-        {{ section.settings.padding_top_mobile }}px
-        20px
-        {{ section.settings.padding_bottom_mobile }}px;
+      padding: {{ section.settings.padding_top_mobile }}px 14px {{ section.settings.padding_bottom_mobile }}px;
     }
 
     #{{ section_id }} .wake-comparison__grid {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 26px;
+    }
+
+    #{{ section_id }} .wake-comparison__content {
+      max-width: 100%;
+      text-align: center;
     }
 
     #{{ section_id }} .wake-comparison__heading {
-      font-size: 34px;
-      line-height: 1.18;
-      margin-bottom: 12px;
+      font-size: 31px;
+      line-height: 1.05;
+      text-align: center;
+      max-width: 320px;
+      margin: 0 auto 14px;
     }
 
     #{{ section_id }} .wake-comparison__subtext {
       font-size: 16px;
-      line-height: 1.55;
-      margin-bottom: 28px;
-      max-width: 100%;
+      line-height: 1.15;
+      text-align: center;
+      max-width: 340px;
+      margin: 0 auto 24px;
     }
 
     #{{ section_id }} .wake-comparison__features {
-      gap: 18px;
-      margin-bottom: 28px;
+      display: none;
     }
 
-    #{{ section_id }} .wake-comparison__feature {
-      gap: 14px;
+    #{{ section_id }} .wake-comparison__button--desktop {
+      display: none;
     }
 
-    #{{ section_id }} .wake-comparison__feature-icon {
-      width: 28px;
-      height: 28px;
-      min-width: 28px;
-    }
-
-    #{{ section_id }} .wake-comparison__feature-text {
-      font-size: 16px;
-      line-height: 1.35;
-    }
-
-    #{{ section_id }} .wake-comparison__button {
+    #{{ section_id }} .wake-comparison__button--mobile {
+      display: flex;
       width: 100%;
       min-width: 0;
-      min-height: 58px;
-      padding: 16px 20px;
-      font-size: 18px;
-      line-height: 1.1;
-    }
-
-    #{{ section_id }} .wake-comparison__table {
-      overflow: hidden;
-      border-radius: 18px;
+      min-height: 44px;
+      margin-top: 30px;
+      padding: 12px 18px;
+      font-size: 15px;
+      line-height: 1.05;
     }
 
     #{{ section_id }} .wake-comparison__table-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+      overflow: visible;
+    }
+
+    #{{ section_id }} .wake-comparison__table {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 17px;
     }
 
     #{{ section_id }} .wake-comparison__table-scroll {
-      min-width: 620px;
+      min-width: 0;
+      width: 100%;
+    }
+
+    #{{ section_id }} .wake-comparison__head,
+    #{{ section_id }} .wake-comparison__row {
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
     #{{ section_id }} .wake-comparison__head > div,
     #{{ section_id }} .wake-comparison__row > div {
-      min-height: 64px;
-      padding: 12px 14px;
+      min-height: 56px;
+      padding: 9px 9px;
     }
 
     #{{ section_id }} .wake-comparison__head-label {
-      font-size: 15px;
-      line-height: 1.2;
+      font-size: 11px;
+      line-height: 1.05;
+      padding-left: 6px;
+      padding-right: 6px;
     }
 
     #{{ section_id }} .wake-comparison__label {
-      font-size: 15px;
-      line-height: 1.15;
+      font-size: 9px;
+      line-height: 1.02;
+      font-weight: 700;
+      word-break: break-word;
     }
 
     #{{ section_id }} .wake-comparison__symbol {
-      font-size: 30px;
+      font-size: 18px;
     }
   }
 </style>
@@ -347,7 +356,7 @@
 
         {% if section.settings.button_label != blank %}
           <a
-            class="wake-comparison__button"
+            class="wake-comparison__button wake-comparison__button--desktop"
             href="{{ section.settings.button_link | default: '#' }}"
           >
             {{ section.settings.button_label | newline_to_br }}
@@ -395,6 +404,15 @@
             {% endfor %}
           </div>
         </div>
+
+        {% if section.settings.button_label != blank %}
+          <a
+            class="wake-comparison__button wake-comparison__button--mobile"
+            href="{{ section.settings.button_link | default: '#' }}"
+          >
+            {{ section.settings.button_label | newline_to_br }}
+          </a>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -434,7 +452,7 @@
       "type": "textarea",
       "id": "button_label",
       "label": "Texte bouton",
-      "default": "Je me réveille avec\nWAKE"
+      "default": "Je me réveille avec WAKE"
     },
     {
       "type": "url",
@@ -470,7 +488,7 @@
       "max": 24,
       "step": 1,
       "unit": "px",
-      "label": "Taille texte intro",
+      "label": "Taille texte intro desktop",
       "default": 18
     },
     {
@@ -486,11 +504,11 @@
     {
       "type": "range",
       "id": "button_text_size",
-      "min": 16,
+      "min": 14,
       "max": 30,
       "step": 1,
       "unit": "px",
-      "label": "Taille texte bouton",
+      "label": "Taille texte bouton desktop",
       "default": 19
     },
     {
@@ -500,7 +518,7 @@
       "max": 28,
       "step": 1,
       "unit": "px",
-      "label": "Taille en-têtes tableau",
+      "label": "Taille en-têtes tableau desktop",
       "default": 18
     },
     {
@@ -510,7 +528,7 @@
       "max": 28,
       "step": 1,
       "unit": "px",
-      "label": "Taille libellés tableau",
+      "label": "Taille libellés tableau desktop",
       "default": 18
     },
     {
@@ -518,7 +536,7 @@
       "id": "table_radius",
       "min": 0,
       "max": 40,
-      "step": 2,
+      "step": 1,
       "unit": "px",
       "label": "Arrondi tableau",
       "default": 22
@@ -558,20 +576,20 @@
       "id": "padding_top_mobile",
       "min": 0,
       "max": 100,
-      "step": 4,
+      "step": 2,
       "unit": "px",
       "label": "Marge haute mobile",
-      "default": 28
+      "default": 20
     },
     {
       "type": "range",
       "id": "padding_bottom_mobile",
       "min": 0,
       "max": 100,
-      "step": 4,
+      "step": 2,
       "unit": "px",
       "label": "Marge basse mobile",
-      "default": 28
+      "default": 20
     },
     {
       "type": "color",
@@ -584,12 +602,6 @@
       "id": "text_color",
       "label": "Couleur texte",
       "default": "#111111"
-    },
-    {
-      "type": "color",
-      "id": "muted_color",
-      "label": "Couleur secondaire",
-      "default": "#555555"
     },
     {
       "type": "color",
@@ -613,13 +625,13 @@
       "type": "color",
       "id": "check_color",
       "label": "Couleur check",
-      "default": "#A7E0B0"
+      "default": "#B8F0C7"
     },
     {
       "type": "color",
       "id": "cross_color",
       "label": "Couleur croix",
-      "default": "#F28AA0"
+      "default": "#F59AB0"
     },
     {
       "type": "color",
