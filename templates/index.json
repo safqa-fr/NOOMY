@@ -506,19 +506,12 @@
             "link_text": "",
             "link_style": "link"
           }
-        },
-        "spacer_cr7bnm": {
-          "type": "spacer",
-          "settings": {
-            "column_size": "6"
-          }
         }
       },
       "block_order": [
         "spacer_LFypEL",
         "item_ErJDTb",
-        "item_Nwmakw",
-        "spacer_cr7bnm"
+        "item_Nwmakw"
       ],
       "name": "Multi-column",
       "settings": {
