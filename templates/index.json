@@ -583,8 +583,64 @@
     },
     "wake_comparison_tXUY7j": {
       "type": "wake-comparison",
+      "blocks": {
+        "row_9FJt6J": {
+          "type": "row",
+          "settings": {
+            "label": "Réveil doux & efficace",
+            "col_1_value": "check",
+            "col_2_value": "cross"
+          }
+        },
+        "row_Epgh8W": {
+          "type": "row",
+          "settings": {
+            "label": "Réveil doux & efficace",
+            "col_1_value": "check",
+            "col_2_value": "cross"
+          }
+        }
+      },
+      "block_order": [
+        "row_9FJt6J",
+        "row_Epgh8W"
+      ],
       "name": "Wake comparison",
-      "settings": {}
+      "settings": {
+        "full_width": true,
+        "heading_prefix": "Pourquoi vous devez choisir",
+        "heading_highlight": "WAKE",
+        "heading_color_1": "#111111",
+        "heading_color_2": "#000000",
+        "subtext": "<p><strong>WAKE</strong> est la solution idéale pour un réveil fiable, sans bruit et sans stress...</p>",
+        "text_color_custom": "#111111",
+        "button_label": "Je me réveille avec WAKE",
+        "button_link": "",
+        "col_1_heading": "WAKE",
+        "col_2_heading": "Les autres alarmes",
+        "heading_size": 62,
+        "text_size": 18,
+        "feature_text_size": 21,
+        "button_text_size": 19,
+        "table_head_size": 18,
+        "table_label_size": 18,
+        "table_radius": 22,
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "padding_horizontal": 40,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 10,
+        "bg_color": "rgba(0,0,0,0)",
+        "text_color": "#111111",
+        "border_color": "#181818",
+        "highlight_bg": "#000000",
+        "highlight_text": "#ffffff",
+        "check_color": "#b8f0c7",
+        "cross_color": "#f59ab0",
+        "button_bg": "#000000",
+        "button_text": "#ffffff",
+        "icon_border": "#111111"
+      }
     },
     "1773344751701ab9d2": {
       "type": "apps",
