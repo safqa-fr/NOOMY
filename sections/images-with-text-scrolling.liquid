@@ -3,26 +3,25 @@
 <style>
   #shopify-section-{{ section.id }} {
     --images-scrolling-block-count: {{ section.blocks.size }};
-    --images-scrolling-image-ratio: 1;
+    --images-scrolling-image-ratio: {{ section.blocks.first.settings.image.aspect_ratio | default: 1 }};
   }
 
   #shopify-section-{{ section.id }} .images-scrolling__media,
-  #shopify-section-{{ section.id }} .images-scrolling__video,
-  #shopify-section-{{ section.id }} .images-scrolling__video video,
   #shopify-section-{{ section.id }} .images-scrolling__media img,
-  #shopify-section-{{ section.id }} .images-scrolling-desktop__media-wrapper > * {
+  #shopify-section-{{ section.id }} .images-scrolling__media video,
+  #shopify-section-{{ section.id }} .images-scrolling__media iframe,
+  #shopify-section-{{ section.id }} .images-scrolling__video {
+    width: 100%;
+    display: block;
+    border-radius: var(--rounded-sm);
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .images-scrolling__media video {
     width: 100%;
     height: auto;
     display: block;
-    overflow: hidden;
-    border-radius: var(--rounded-sm);
-  }
-
-  #shopify-section-{{ section.id }} .images-scrolling__video video {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    display: block;
     border-radius: inherit;
   }
 
@@ -59,20 +58,11 @@
                   muted: true,
                   controls: block.settings.show_controls,
                   playsinline: true,
-                  preload: 'metadata',
-                  image_size: '1200x'
+                  preload: 'metadata'
               }}
             </div>
           {%- elsif block.settings.image != blank -%}
-            {{
-              block.settings.image
-              | image_url: width: block.settings.image.width
-              | image_tag:
-                loading: 'lazy',
-                sizes: '(max-width: 740px) 100vw, 650px',
-                widths: '200,300,400,600,800,1000,1200,1400,1600',
-                class: 'rounded-sm'
-            }}
+            {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 100vw, 650px', widths: '200,300,400,600,800,1000,1200,1400,1600', class: 'rounded-sm' -}}
           {%- else -%}
             {%- capture image_placeholder -%}product-{%- cycle '1', '2', '3', '4' -%}{%- endcapture -%}
             {{- image_placeholder | placeholder_svg_tag: 'placeholder' -}}
@@ -88,15 +78,7 @@
             {%- if block.settings.custom_icon != blank -%}
               {%- capture sizes -%}{{ block.settings.icon_width }}px{%- endcapture -%}
               {%- capture widths -%}{{ block.settings.icon_width }}, {{ block.settings.icon_width | times: 2 | at_most: block.settings.custom_icon.width }}{%- endcapture -%}
-              {{
-                block.settings.custom_icon
-                | image_url: width: block.settings.custom_icon.width
-                | image_tag:
-                  loading: 'lazy',
-                  sizes: sizes,
-                  widths: widths,
-                  class: 'images-scrolling__icon'
-              }}
+              {{- block.settings.custom_icon | image_url: width: block.settings.custom_icon.width | image_tag: loading: 'lazy', sizes: sizes, widths: widths, class: 'images-scrolling__icon' -}}
             {%- elsif block.settings.icon != 'none' -%}
               {%- render 'icon' with block.settings.icon, width: block.settings.icon_width, height: block.settings.icon_width, class: 'images-scrolling__icon' -%}
             {%- endif -%}
@@ -131,15 +113,7 @@
             {%- if block.settings.custom_icon != blank -%}
               {%- capture sizes -%}{{ block.settings.icon_width }}px{%- endcapture -%}
               {%- capture widths -%}{{ block.settings.icon_width }}, {{ block.settings.icon_width | times: 2 | at_most: block.settings.custom_icon.width }}{%- endcapture -%}
-              {{
-                block.settings.custom_icon
-                | image_url: width: block.settings.custom_icon.width
-                | image_tag:
-                  loading: 'lazy',
-                  sizes: sizes,
-                  widths: widths,
-                  class: 'images-scrolling__icon'
-              }}
+              {{- block.settings.custom_icon | image_url: width: block.settings.custom_icon.width | image_tag: loading: 'lazy', sizes: sizes, widths: widths, class: 'images-scrolling__icon' -}}
             {%- elsif block.settings.icon != 'none' -%}
               {%- render 'icon' with block.settings.icon, width: block.settings.icon_width, height: block.settings.icon_width, class: 'images-scrolling__icon' -%}
             {%- endif -%}
@@ -169,20 +143,11 @@
                   muted: true,
                   controls: block.settings.show_controls,
                   playsinline: true,
-                  preload: 'metadata',
-                  image_size: '1200x'
+                  preload: 'metadata'
               }}
             </div>
           {%- elsif block.settings.image != blank -%}
-            {{
-              block.settings.image
-              | image_url: width: block.settings.image.width
-              | image_tag:
-                loading: 'lazy',
-                sizes: '(max-width: 740px) 100vw, 650px',
-                widths: '200,300,400,600,800,1000,1200,1400,1600',
-                class: 'rounded-sm'
-            }}
+            {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 100vw, 650px', widths: '200,300,400,600,800,1000,1200,1400,1600', class: 'rounded-sm' -}}
           {%- else -%}
             {%- capture image_placeholder -%}product-{%- cycle '1', '2', '3', '4' -%}{%- endcapture -%}
             {{- image_placeholder | placeholder_svg_tag: 'placeholder' -}}
@@ -340,58 +305,265 @@
           "id": "icon",
           "label": "Icon",
           "options": [
-            { "value": "none", "label": "None" },
-            { "value": "picto-coupon", "label": "Coupon", "group": "Shop" },
-            { "value": "picto-percent", "label": "Percent", "group": "Shop" },
-            { "value": "picto-gift", "label": "Gift", "group": "Shop" },
-            { "value": "picto-star", "label": "Star", "group": "Shop" },
-            { "value": "picto-like", "label": "Like", "group": "Shop" },
-            { "value": "picto-building", "label": "Building", "group": "Shop" },
-            { "value": "picto-love", "label": "Love", "group": "Shop" },
-            { "value": "picto-award-gift", "label": "Award gift", "group": "Shop" },
-            { "value": "picto-happy", "label": "Happy", "group": "Shop" },
-            { "value": "picto-box", "label": "Box", "group": "Shipping" },
-            { "value": "picto-pin", "label": "Pin", "group": "Shipping" },
-            { "value": "picto-timer", "label": "Timer", "group": "Shipping" },
-            { "value": "picto-validation", "label": "Validation", "group": "Shipping" },
-            { "value": "picto-truck", "label": "Truck", "group": "Shipping" },
-            { "value": "picto-return", "label": "Return", "group": "Shipping" },
-            { "value": "picto-earth", "label": "Earth", "group": "Shipping" },
-            { "value": "picto-plane", "label": "Plane", "group": "Shipping" },
-            { "value": "picto-credit-card", "label": "Credit card", "group": "Payment & Security" },
-            { "value": "picto-lock", "label": "Lock", "group": "Payment & Security" },
-            { "value": "picto-shield", "label": "Shield", "group": "Payment & Security" },
-            { "value": "picto-secure-profile", "label": "Secure profile", "group": "Payment & Security" },
-            { "value": "picto-money", "label": "Money", "group": "Payment & Security" },
-            { "value": "picto-recycle", "label": "Recycle", "group": "Ecology" },
-            { "value": "picto-leaf", "label": "Leaf", "group": "Ecology" },
-            { "value": "picto-tree", "label": "Tree", "group": "Ecology" },
-            { "value": "picto-mobile-phone", "label": "Mobile phone", "group": "Communication" },
-            { "value": "picto-phone", "label": "Phone", "group": "Communication" },
-            { "value": "picto-chat", "label": "Chat", "group": "Communication" },
-            { "value": "picto-customer-support", "label": "Customer support", "group": "Communication" },
-            { "value": "picto-operator", "label": "Operator", "group": "Communication" },
-            { "value": "picto-mailbox", "label": "Mailbox", "group": "Communication" },
-            { "value": "picto-envelope", "label": "Envelope", "group": "Communication" },
-            { "value": "picto-comment", "label": "Comment", "group": "Communication" },
-            { "value": "picto-question", "label": "Question", "group": "Communication" },
-            { "value": "picto-send", "label": "Send", "group": "Communication" },
-            { "value": "picto-at-sign", "label": "At sign", "group": "Tech" },
-            { "value": "picto-camera", "label": "Camera", "group": "Tech" },
-            { "value": "picto-wifi", "label": "WiFi", "group": "Tech" },
-            { "value": "picto-bluetooth", "label": "Bluetooth", "group": "Tech" },
-            { "value": "picto-printer", "label": "Printer", "group": "Tech" },
-            { "value": "picto-smart-watch", "label": "Smart watch", "group": "Tech" },
-            { "value": "picto-coffee", "label": "Coffee", "group": "Food & Drink" },
-            { "value": "picto-burger", "label": "Burger", "group": "Food & Drink" },
-            { "value": "picto-beer", "label": "Beer", "group": "Food & Drink" },
-            { "value": "picto-target", "label": "Target", "group": "Other" },
-            { "value": "picto-document", "label": "Document", "group": "Other" },
-            { "value": "picto-jewelry", "label": "Jewelry", "group": "Other" },
-            { "value": "picto-music", "label": "Music", "group": "Other" },
-            { "value": "picto-file", "label": "File", "group": "Other" },
-            { "value": "picto-mask", "label": "Mask", "group": "Other" },
-            { "value": "picto-stop", "label": "Stop", "group": "Other" }
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "picto-coupon",
+              "label": "Coupon",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-percent",
+              "label": "Percent",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-gift",
+              "label": "Gift",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-star",
+              "label": "Star",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-like",
+              "label": "Like",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-building",
+              "label": "Building",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-love",
+              "label": "Love",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-award-gift",
+              "label": "Award gift",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-happy",
+              "label": "Happy",
+              "group": "Shop"
+            },
+            {
+              "value": "picto-box",
+              "label": "Box",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-pin",
+              "label": "Pin",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-timer",
+              "label": "Timer",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-validation",
+              "label": "Validation",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-truck",
+              "label": "Truck",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-return",
+              "label": "Return",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-earth",
+              "label": "Earth",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-plane",
+              "label": "Plane",
+              "group": "Shipping"
+            },
+            {
+              "value": "picto-credit-card",
+              "label": "Credit card",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-lock",
+              "label": "Lock",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-shield",
+              "label": "Shield",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-secure-profile",
+              "label": "Secure profile",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-money",
+              "label": "Money",
+              "group": "Payment & Security"
+            },
+            {
+              "value": "picto-recycle",
+              "label": "Recycle",
+              "group": "Ecology"
+            },
+            {
+              "value": "picto-leaf",
+              "label": "Leaf",
+              "group": "Ecology"
+            },
+            {
+              "value": "picto-tree",
+              "label": "Tree",
+              "group": "Ecology"
+            },
+            {
+              "value": "picto-mobile-phone",
+              "label": "Mobile phone",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-phone",
+              "label": "Phone",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-chat",
+              "label": "Chat",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-customer-support",
+              "label": "Customer support",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-operator",
+              "label": "Operator",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-mailbox",
+              "label": "Mailbox",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-envelope",
+              "label": "Envelope",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-comment",
+              "label": "Comment",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-question",
+              "label": "Question",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-send",
+              "label": "Send",
+              "group": "Communication"
+            },
+            {
+              "value": "picto-at-sign",
+              "label": "At sign",
+              "group": "Tech"
+            },
+            {
+              "value": "picto-camera",
+              "label": "Camera",
+              "group": "Tech"
+            },
+            {
+              "value": "picto-wifi",
+              "label": "WiFi",
+              "group": "Tech"
+            },
+            {
+              "value": "picto-bluetooth",
+              "label": "Bluetooth",
+              "group": "Tech"
+            },
+            {
+              "value": "picto-printer",
+              "label": "Printer",
+              "group": "Tech"
+            },
+            {
+              "value": "picto-smart-watch",
+              "label": "Smart watch",
+              "group": "Tech"
+            },
+            {
+              "value": "picto-coffee",
+              "label": "Coffee",
+              "group": "Food & Drink"
+            },
+            {
+              "value": "picto-burger",
+              "label": "Burger",
+              "group": "Food & Drink"
+            },
+            {
+              "value": "picto-beer",
+              "label": "Beer",
+              "group": "Food & Drink"
+            },
+            {
+              "value": "picto-target",
+              "label": "Target",
+              "group": "Other"
+            },
+            {
+              "value": "picto-document",
+              "label": "Document",
+              "group": "Other"
+            },
+            {
+              "value": "picto-jewelry",
+              "label": "Jewelry",
+              "group": "Other"
+            },
+            {
+              "value": "picto-music",
+              "label": "Music",
+              "group": "Other"
+            },
+            {
+              "value": "picto-file",
+              "label": "File",
+              "group": "Other"
+            },
+            {
+              "value": "picto-mask",
+              "label": "Mask",
+              "group": "Other"
+            },
+            {
+              "value": "picto-stop",
+              "label": "Stop",
+              "group": "Other"
+            }
           ],
           "default": "none"
         },
