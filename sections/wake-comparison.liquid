@@ -17,12 +17,35 @@
     --table-radius: {{ section.settings.table_radius }}px;
     background: var(--bg);
     color: var(--text);
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #{{ section_id }}.section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #shopify-section-{{ section.id }} {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  #shopify-section-{{ section.id }} .section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   #{{ section_id }} .wake-comparison__inner {
     max-width: {% if section.settings.full_width %}100%{% else %}1400px{% endif %};
     margin: 0 auto;
-    padding: {{ section.settings.padding_top | minus: 45 }}px {{ section.settings.padding_horizontal }}px {{ section.settings.padding_bottom | minus: 45 }}px;
+    padding: 0 {{ section.settings.padding_horizontal }}px 0;
   }
 
   #{{ section_id }} .wake-comparison__grid {
@@ -219,9 +242,531 @@
     color: var(--cross-color);
   }
 
+  @media screen and (max-width: 1199px) {
+    #{{ section_id }} .wake-comparison__grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    #{{ section_id }} .wake-comparison__content {
+      max-width: 100%;
+    }
+  }
+
   @media screen and (max-width: 768px) {
+    #{{ section_id }} {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
     #{{ section_id }} .wake-comparison__inner {
-      padding: {{ section.settings.padding_top_mobile | minus: 20 }}px 14px {{ section.settings.padding_bottom_mobile | minus: 20 }}px;
+      padding: 0 14px 0;
+    }
+
+    #{{ section_id }} .wake-comparison__grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    #{{ section_id }} .wake-comparison__content {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    #{{ section_id }} .wake-comparison__heading {
+      font-size: 31px;
+      line-height: 1.05;
+      text-align: center;
+      max-width: 320px;
+      margin: 0 auto 8px;
+    }
+
+    #{{ section_id }} .wake-comparison__subtext {
+      font-size: 16px;
+      line-height: 1.15;
+      text-align: center;
+      max-width: 340px;
+      margin: 0 auto 14px;
+    }
+
+    #{{ section_id }} .wake-comparison__features {
+      display: none;
+    }
+
+    #{{ section_id }} .wake-comparison__button--desktop {
+      display: none;
+    }
+
+    #{{ section_id }} .wake-comparison__table-wrap {
+      overflow: visible;
+      margin-top: 6px;
+    }
+
+    #{{ section_id }} .wake-comparison__table {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 17px;
+    }
+
+    #{{ section_id }} .wake-comparison__table-scroll {
+      min-width: 0;
+      width: 100%;
+    }
+
+    #{{ section_id }} .wake-comparison__head,
+    #{{ section_id }} .wake-comparison__row {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #{{ section_id }} .wake-comparison__head > div,
+    #{{ section_id }} .wake-comparison__row > div {
+      min-height: 56px;
+      padding: 9px 9px;
+    }
+
+    #{{ section_id }} .wake-comparison__head-label {
+      font-size: 11px;
+      line-height: 1.05;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+
+    #{{ section_id }} .wake-comparison__label {
+      font-size: 9px;
+      line-height: 1.02;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    #{{ section_id }} .wake-comparison__symbol {
+      font-size: 18px;
+    }
+
+    #{{ section_id }} .wake-comparison__button--mobile {
+      display: flex;
+      width: 100%;
+      min-width: 0;
+      min-height: 44px;
+      margin-top: 16px;
+      padding: 12px 18px;
+      font-size: 15px;
+      line-height: 1.05;
     }
   }
 </style>
+
+<section id="{{ section_id }}" class="section">
+  <div class="wake-comparison__inner">
+    <div class="wake-comparison__grid">
+      <div class="wake-comparison__content">
+        <h2 class="wake-comparison__heading">
+          <em>{{ section.settings.heading_prefix }}</em>
+          <strong>{{ section.settings.heading_highlight }}</strong>
+        </h2>
+
+        {% if section.settings.subtext != blank %}
+          <div class="wake-comparison__subtext">
+            {{ section.settings.subtext }}
+          </div>
+        {% endif %}
+
+        {% if section.blocks.size > 0 %}
+          <div class="wake-comparison__features">
+            {% for block in section.blocks %}
+              {% if block.type == 'feature' %}
+                <div class="wake-comparison__feature" {{ block.shopify_attributes }}>
+                  <span class="wake-comparison__feature-icon" aria-hidden="true"></span>
+                  <span class="wake-comparison__feature-text">{{ block.settings.text }}</span>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if section.settings.button_label != blank %}
+          <a
+            class="wake-comparison__button wake-comparison__button--desktop"
+            href="{{ section.settings.button_link | default: '#' }}"
+          >
+            {{ section.settings.button_label | newline_to_br }}
+          </a>
+        {% endif %}
+      </div>
+
+      <div class="wake-comparison__table-wrap">
+        <div class="wake-comparison__table">
+          <div class="wake-comparison__table-scroll">
+            <div class="wake-comparison__head">
+              <div></div>
+              <div class="wake-comparison__head-label wake-comparison__head-label--highlight">
+                {{ section.settings.col_1_heading }}
+              </div>
+              <div class="wake-comparison__head-label">
+                {{ section.settings.col_2_heading }}
+              </div>
+            </div>
+
+            {% for block in section.blocks %}
+              {% if block.type == 'row' %}
+                <div class="wake-comparison__row" {{ block.shopify_attributes }}>
+                  <div class="wake-comparison__label">
+                    {{ block.settings.label }}
+                  </div>
+
+                  <div class="wake-comparison__cell wake-comparison__cell--highlight">
+                    {% if block.settings.col_1_value == 'check' %}
+                      <span class="wake-comparison__symbol wake-comparison__symbol--check">✓</span>
+                    {% else %}
+                      <span class="wake-comparison__symbol wake-comparison__symbol--cross">×</span>
+                    {% endif %}
+                  </div>
+
+                  <div class="wake-comparison__cell">
+                    {% if block.settings.col_2_value == 'check' %}
+                      <span class="wake-comparison__symbol wake-comparison__symbol--check">✓</span>
+                    {% else %}
+                      <span class="wake-comparison__symbol wake-comparison__symbol--cross">×</span>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+        {% if section.settings.button_label != blank %}
+          <a
+            class="wake-comparison__button wake-comparison__button--mobile"
+            href="{{ section.settings.button_link | default: '#' }}"
+          >
+            {{ section.settings.button_label | newline_to_br }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Wake comparison",
+  "tag": "section",
+  "class": "shopify-section--wake-comparison",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Pleine largeur",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading_prefix",
+      "label": "Titre partie 1",
+      "default": "Pourquoi vous devez choisir"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight",
+      "label": "Titre partie 2",
+      "default": "WAKE"
+    },
+    {
+      "type": "color",
+      "id": "heading_color_1",
+      "label": "Couleur Titre partie 1",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "heading_color_2",
+      "label": "Couleur Titre partie 2",
+      "default": "#000000"
+    },
+    {
+      "type": "richtext",
+      "id": "subtext",
+      "label": "Texte",
+      "default": "<p><strong>WAKE</strong> est la solution idéale pour un réveil fiable, sans bruit et sans stress...</p>"
+    },
+    {
+      "type": "color",
+      "id": "text_color_custom",
+      "label": "Couleur texte",
+      "default": "#111111"
+    },
+    {
+      "type": "textarea",
+      "id": "button_label",
+      "label": "Texte bouton",
+      "default": "Je me réveille avec WAKE"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Lien bouton"
+    },
+    {
+      "type": "text",
+      "id": "col_1_heading",
+      "label": "Titre colonne 1",
+      "default": "WAKE"
+    },
+    {
+      "type": "text",
+      "id": "col_2_heading",
+      "label": "Titre colonne 2",
+      "default": "Les autres alarmes"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 36,
+      "max": 90,
+      "step": 2,
+      "unit": "px",
+      "label": "Taille titre desktop",
+      "default": 62
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille texte intro desktop",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "feature_text_size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille bénéfices desktop",
+      "default": 21
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 14,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille texte bouton desktop",
+      "default": 19
+    },
+    {
+      "type": "range",
+      "id": "table_head_size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille en-têtes tableau desktop",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "table_label_size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille libellés tableau desktop",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "table_radius",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Arrondi tableau",
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Marge haute desktop",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Marge basse desktop",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 16,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding horizontal desktop",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Marge haute mobile",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Marge basse mobile",
+      "default": 10
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Fond section",
+      "default": "#E9DCC7"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur texte général",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Couleur bordures",
+      "default": "#181818"
+    },
+    {
+      "type": "color",
+      "id": "highlight_bg",
+      "label": "Fond colonne WAKE",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "highlight_text",
+      "label": "Texte colonne WAKE",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "check_color",
+      "label": "Couleur check",
+      "default": "#B8F0C7"
+    },
+    {
+      "type": "color",
+      "id": "cross_color",
+      "label": "Couleur croix",
+      "default": "#F59AB0"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Fond bouton",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text",
+      "label": "Texte bouton",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "icon_border",
+      "label": "Contour icône bénéfice",
+      "default": "#111111"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Bénéfice",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Texte",
+          "default": "Réveil silencieux"
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "name": "Ligne tableau",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Libellé",
+          "default": "Réveil doux & efficace"
+        },
+        {
+          "type": "select",
+          "id": "col_1_value",
+          "label": "Colonne WAKE",
+          "default": "check",
+          "options": [
+            { "value": "check", "label": "Check" },
+            { "value": "cross", "label": "Croix" }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "col_2_value",
+          "label": "Colonne autres alarmes",
+          "default": "cross",
+          "options": [
+            { "value": "check", "label": "Check" },
+            { "value": "cross", "label": "Croix" }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Wake comparison",
+      "blocks": [
+        { "type": "feature", "settings": { "text": "Réveil silencieux" } },
+        { "type": "feature", "settings": { "text": "Confort absolu" } },
+        { "type": "feature", "settings": { "text": "Vibration douce" } },
+        { "type": "feature", "settings": { "text": "Réveil garanti" } },
+
+        { "type": "row", "settings": { "label": "Réveil doux & efficace", "col_1_value": "check", "col_2_value": "cross" } },
+        { "type": "row", "settings": { "label": "Confort nocturne", "col_1_value": "check", "col_2_value": "cross" } },
+        { "type": "row", "settings": { "label": "Ne dérange pas votre partenaire", "col_1_value": "check", "col_2_value": "cross" } },
+        { "type": "row", "settings": { "label": "Favorise un meilleur sommeil", "col_1_value": "check", "col_2_value": "cross" } },
+        { "type": "row", "settings": { "label": "Longue autonomie", "col_1_value": "check", "col_2_value": "cross" } },
+        { "type": "row", "settings": { "label": "Satisfait ou remboursé", "col_1_value": "check", "col_2_value": "cross" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
