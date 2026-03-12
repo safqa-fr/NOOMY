@@ -128,10 +128,17 @@
     "rich_text_647zrN": {
       "type": "rich-text",
       "blocks": {
+        "richtext_xLVXM9": {
+          "type": "richtext",
+          "settings": {
+            "content": "<h1><em>Why choose </em><strong>POPWATCH </strong>?</h1>"
+          }
+        },
         "heading_gKyL8P": {
           "type": "heading",
+          "disabled": true,
           "settings": {
-            "text": "Why choose ?",
+            "text": "Why choose POPWATCH ?",
             "heading_tag": "h1",
             "text_color": "",
             "gradient": ""
@@ -139,6 +146,7 @@
         }
       },
       "block_order": [
+        "richtext_xLVXM9",
         "heading_gKyL8P"
       ],
       "name": "Rich text",
@@ -654,11 +662,11 @@
         "muted_color": "#555555",
         "border_color": "#181818",
         "highlight_bg": "#000000",
-        "highlight_text": "#FFFFFF",
-        "check_color": "#A7E0B0",
+        "highlight_text": "#ffffff",
+        "check_color": "#a7e0b0",
         "cross_color": "#ff0000",
         "button_bg": "#000000",
-        "button_text": "#FFFFFF",
+        "button_text": "#ffffff",
         "icon_border": "#111111"
       }
     },
