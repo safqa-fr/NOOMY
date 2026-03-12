@@ -483,24 +483,11 @@
             "content": "<p>PopWatch wakes you with powerful wrist vibrations — <strong>3X stronger than smartwatches</strong>, yet completely localized to your wrist so no one else feels a thing.</p><p>No more blaring phone alarms. No more weak smartwatch buzzes you sleep right through. No more relying on someone else to get you up.</p><p><strong>Just reliable wake-ups, every single time — without stress, without guilt.</strong></p>"
           }
         },
-        "item_KrDxbR": {
-          "type": "item",
-          "settings": {
-            "media_type": "image",
-            "video": "shopify://files/videos/5c2b429a8a584077ba2032b79129516d.HD-720p-4.5Mbps-59886328.mp4",
-            "enable_autoplay": true,
-            "enable_loop": true,
-            "show_controls": false,
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Heading",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        },
         "item_QTx9qn": {
           "type": "item",
           "settings": {
             "media_type": "video",
+            "video": "shopify://files/videos/5c2b429a8a584077ba2032b79129516d.HD-720p-4.5Mbps-59886328.mp4",
             "enable_autoplay": true,
             "enable_loop": true,
             "show_controls": false,
@@ -513,7 +500,6 @@
       },
       "block_order": [
         "item_WqkT7Q",
-        "item_KrDxbR",
         "item_QTx9qn"
       ],
       "name": "Images and text scrolling",
