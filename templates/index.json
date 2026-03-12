@@ -459,6 +459,7 @@
         "item_XkBYx8",
         "spacer_bNXnwg"
       ],
+      "disabled": true,
       "name": "Multi-column",
       "settings": {
         "full_width": true,
@@ -674,7 +675,7 @@
         "subtext": "<p><strong>POPWATCH</strong> is the ideal solution for a reliable wake-up, noise-free and stress-free..</p>",
         "text_color_custom": "#111111",
         "button_label": "I wake up with POPWATCH",
-        "button_link": "shopify://products/noomy-aura",
+        "button_link": "",
         "col_1_heading": "POPWATCH",
         "col_2_heading": "PHONE & SMARTWATCH",
         "heading_size": 62,
