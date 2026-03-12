@@ -548,6 +548,120 @@
         "text_color": ""
       }
     },
+    "wake_comparison_tXUY7j": {
+      "type": "wake-comparison",
+      "blocks": {
+        "feature_qXNpWi": {
+          "type": "feature",
+          "settings": {
+            "text": "Réveil silencieux"
+          }
+        },
+        "feature_xy74dL": {
+          "type": "feature",
+          "settings": {
+            "text": "Confort absolu"
+          }
+        },
+        "feature_RjcXtn": {
+          "type": "feature",
+          "settings": {
+            "text": "Vibration douce"
+          }
+        },
+        "feature_FRzdpf": {
+          "type": "feature",
+          "settings": {
+            "text": "Réveil garanti"
+          }
+        },
+        "row_Rwtxib": {
+          "type": "row",
+          "settings": {
+            "label": "USED AS AN ALARM",
+            "col_1_value": "check",
+            "col_2_value": "cross"
+          }
+        },
+        "row_NVQWrM": {
+          "type": "row",
+          "settings": {
+            "label": "Reliable for people who oversleep",
+            "col_1_value": "check",
+            "col_2_value": "cross"
+          }
+        },
+        "row_cGFk8M": {
+          "type": "row",
+          "settings": {
+            "label": "14+ DAY BATTERY",
+            "col_1_value": "check",
+            "col_2_value": "cross"
+          }
+        },
+        "row_gLKeRD": {
+          "type": "row",
+          "settings": {
+            "label": "Partner-Friendly / Silent Wake-Up",
+            "col_1_value": "check",
+            "col_2_value": "cross"
+          }
+        },
+        "row_FKGJnY": {
+          "type": "row",
+          "settings": {
+            "label": "100-DAY GUARANTEE",
+            "col_1_value": "check",
+            "col_2_value": "cross"
+          }
+        }
+      },
+      "block_order": [
+        "feature_qXNpWi",
+        "feature_xy74dL",
+        "feature_RjcXtn",
+        "feature_FRzdpf",
+        "row_Rwtxib",
+        "row_NVQWrM",
+        "row_cGFk8M",
+        "row_gLKeRD",
+        "row_FKGJnY"
+      ],
+      "name": "Wake comparison",
+      "settings": {
+        "full_width": true,
+        "heading_prefix": "Pourquoi vous devez choisir",
+        "heading_highlight": "WAKE",
+        "subtext": "<p><strong>WAKE</strong> est la solution idéale pour un réveil fiable, sans bruit et sans stress...</p>",
+        "button_label": "Je me réveille avec\nWAKE",
+        "button_link": "",
+        "col_1_heading": "POPWATCH",
+        "col_2_heading": "PHONE & SMARTWATCH",
+        "heading_size": 62,
+        "text_size": 18,
+        "feature_text_size": 21,
+        "button_text_size": 19,
+        "table_head_size": 18,
+        "table_label_size": 18,
+        "table_radius": 22,
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "padding_horizontal": 40,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 32,
+        "bg_color": "#ffffff",
+        "text_color": "#111111",
+        "muted_color": "#555555",
+        "border_color": "#181818",
+        "highlight_bg": "#000000",
+        "highlight_text": "#FFFFFF",
+        "check_color": "#A7E0B0",
+        "cross_color": "#F28AA0",
+        "button_bg": "#000000",
+        "button_text": "#FFFFFF",
+        "icon_border": "#111111"
+      }
+    },
     "faq_EQx4Dx": {
       "type": "faq",
       "blocks": {
@@ -658,6 +772,7 @@
     "tabs_y8zmfe",
     "multi_column_LkzPEJ",
     "multi_column_tg6hXk",
+    "wake_comparison_tXUY7j",
     "faq_EQx4Dx",
     "contact_ApggHV"
   ]
