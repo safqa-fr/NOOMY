@@ -38,7 +38,6 @@
 
   #{{ section_id }} .wake-comparison__heading {
     margin: 0 0 14px;
-    color: var(--text);
     font-size: clamp(40px, 4vw, {{ section.settings.heading_size }}px);
     line-height: 1.08;
     font-weight: 400;
@@ -48,16 +47,18 @@
   #{{ section_id }} .wake-comparison__heading em {
     font-style: italic;
     font-weight: 400;
+    color: {{ section.settings.heading_color_1 }};
   }
 
   #{{ section_id }} .wake-comparison__heading strong {
     font-style: normal;
     font-weight: 800;
+    color: {{ section.settings.heading_color_2 }};
   }
 
   #{{ section_id }} .wake-comparison__subtext {
     margin: 0 0 40px;
-    color: var(--text);
+    color: {{ section.settings.text_color_custom }};
     font-size: {{ section.settings.text_size }}px;
     line-height: 1.45;
     max-width: 680px;
@@ -237,7 +238,7 @@
 
     #{{ section_id }} .wake-comparison__grid {
       grid-template-columns: 1fr;
-      gap: 26px;
+      gap: 14px;
     }
 
     #{{ section_id }} .wake-comparison__content {
@@ -250,7 +251,7 @@
       line-height: 1.05;
       text-align: center;
       max-width: 320px;
-      margin: 0 auto 14px;
+      margin: 0 auto 8px;
     }
 
     #{{ section_id }} .wake-comparison__subtext {
@@ -258,7 +259,7 @@
       line-height: 1.15;
       text-align: center;
       max-width: 340px;
-      margin: 0 auto 24px;
+      margin: 0 auto 14px;
     }
 
     #{{ section_id }} .wake-comparison__features {
@@ -269,19 +270,9 @@
       display: none;
     }
 
-    #{{ section_id }} .wake-comparison__button--mobile {
-      display: flex;
-      width: 100%;
-      min-width: 0;
-      min-height: 44px;
-      margin-top: 30px;
-      padding: 12px 18px;
-      font-size: 15px;
-      line-height: 1.05;
-    }
-
     #{{ section_id }} .wake-comparison__table-wrap {
       overflow: visible;
+      margin-top: 6px;
     }
 
     #{{ section_id }} .wake-comparison__table {
@@ -322,6 +313,17 @@
 
     #{{ section_id }} .wake-comparison__symbol {
       font-size: 18px;
+    }
+
+    #{{ section_id }} .wake-comparison__button--mobile {
+      display: flex;
+      width: 100%;
+      min-width: 0;
+      min-height: 44px;
+      margin-top: 16px;
+      padding: 12px 18px;
+      font-size: 15px;
+      line-height: 1.05;
     }
   }
 </style>
@@ -443,10 +445,28 @@
       "default": "WAKE"
     },
     {
+      "type": "color",
+      "id": "heading_color_1",
+      "label": "Couleur Titre partie 1",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "heading_color_2",
+      "label": "Couleur Titre partie 2",
+      "default": "#000000"
+    },
+    {
       "type": "richtext",
       "id": "subtext",
       "label": "Texte",
       "default": "<p><strong>WAKE</strong> est la solution idéale pour un réveil fiable, sans bruit et sans stress...</p>"
+    },
+    {
+      "type": "color",
+      "id": "text_color_custom",
+      "label": "Couleur texte",
+      "default": "#111111"
     },
     {
       "type": "textarea",
@@ -579,7 +599,7 @@
       "step": 2,
       "unit": "px",
       "label": "Marge haute mobile",
-      "default": 20
+      "default": 10
     },
     {
       "type": "range",
@@ -589,7 +609,7 @@
       "step": 2,
       "unit": "px",
       "label": "Marge basse mobile",
-      "default": 20
+      "default": 10
     },
     {
       "type": "color",
@@ -600,7 +620,7 @@
     {
       "type": "color",
       "id": "text_color",
-      "label": "Couleur texte",
+      "label": "Couleur texte général",
       "default": "#111111"
     },
     {
