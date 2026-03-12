@@ -440,12 +440,19 @@
             "link_text": "",
             "link_style": "link"
           }
+        },
+        "spacer_bNXnwg": {
+          "type": "spacer",
+          "settings": {
+            "column_size": "6"
+          }
         }
       },
       "block_order": [
         "spacer_dwCTrt",
         "item_eHYXDE",
-        "item_XkBYx8"
+        "item_XkBYx8",
+        "spacer_bNXnwg"
       ],
       "name": "Multi-column",
       "settings": {
