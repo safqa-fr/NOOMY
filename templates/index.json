@@ -27,6 +27,7 @@
         },
         "button_KQDUwK": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "style": "fill",
             "size": "xl",
