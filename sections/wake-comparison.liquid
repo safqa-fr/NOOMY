@@ -15,7 +15,7 @@
     --button-bg: {{ section.settings.button_bg }};
     --button-text: {{ section.settings.button_text }};
     --icon-border: {{ section.settings.icon_border }};
-    --section-radius: {{ section.settings.table_radius }}px;
+    --table-radius: {{ section.settings.table_radius }}px;
     background: var(--bg);
     color: var(--text);
   }
@@ -23,13 +23,16 @@
   #{{ section_id }} .wake-comparison__inner {
     max-width: {% if section.settings.full_width %}100%{% else %}1400px{% endif %};
     margin: 0 auto;
-    padding: {{ section.settings.padding_top }}px {{ section.settings.padding_horizontal }}px {{ section.settings.padding_bottom }}px;
+    padding:
+      {{ section.settings.padding_top }}px
+      {{ section.settings.padding_horizontal }}px
+      {{ section.settings.padding_bottom }}px;
   }
 
   #{{ section_id }} .wake-comparison__grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(540px, 0.95fr);
-    gap: 48px;
+    gap: 56px;
     align-items: center;
   }
 
@@ -38,10 +41,10 @@
   }
 
   #{{ section_id }} .wake-comparison__heading {
-    margin: 0 0 12px;
+    margin: 0 0 14px;
     color: var(--text);
-    font-size: clamp(32px, 4vw, {{ section.settings.heading_size }}px);
-    line-height: 1.1;
+    font-size: clamp(40px, 4vw, {{ section.settings.heading_size }}px);
+    line-height: 1.08;
     font-weight: 400;
     letter-spacing: -0.03em;
   }
@@ -52,16 +55,16 @@
   }
 
   #{{ section_id }} .wake-comparison__heading strong {
-    font-weight: 800;
     font-style: normal;
+    font-weight: 800;
   }
 
   #{{ section_id }} .wake-comparison__subtext {
-    margin: 0 0 36px;
+    margin: 0 0 40px;
     color: var(--text);
-    opacity: 0.9;
     font-size: {{ section.settings.text_size }}px;
     line-height: 1.6;
+    opacity: 0.95;
     max-width: 680px;
   }
 
@@ -71,8 +74,8 @@
 
   #{{ section_id }} .wake-comparison__features {
     display: grid;
-    gap: 22px;
-    margin: 0 0 36px;
+    gap: 24px;
+    margin: 0 0 40px;
   }
 
   #{{ section_id }} .wake-comparison__feature {
@@ -95,8 +98,8 @@
 
   #{{ section_id }} .wake-comparison__feature-icon::before {
     content: "";
-    width: 9px;
-    height: 14px;
+    width: 8px;
+    height: 13px;
     border-right: 1.8px solid var(--text);
     border-bottom: 1.8px solid var(--text);
     transform: rotate(45deg) translate(-1px, -1px);
@@ -139,13 +142,17 @@
   #{{ section_id }} .wake-comparison__table {
     width: 100%;
     border: 1px solid var(--border);
-    border-radius: var(--section-radius);
+    border-radius: var(--table-radius);
     overflow: hidden;
     background: transparent;
   }
 
-  #{{ section_id }} .wake-comparison__row,
-  #{{ section_id }} .wake-comparison__head {
+  #{{ section_id }} .wake-comparison__table-scroll {
+    width: 100%;
+  }
+
+  #{{ section_id }} .wake-comparison__head,
+  #{{ section_id }} .wake-comparison__row {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr 0.95fr;
   }
@@ -210,7 +217,7 @@
   @media screen and (max-width: 1199px) {
     #{{ section_id }} .wake-comparison__grid {
       grid-template-columns: 1fr;
-      gap: 34px;
+      gap: 36px;
       align-items: start;
     }
 
@@ -219,18 +226,30 @@
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     #{{ section_id }} .wake-comparison__inner {
-      padding: {{ section.settings.padding_top_mobile }}px 20px {{ section.settings.padding_bottom_mobile }}px;
+      padding:
+        {{ section.settings.padding_top_mobile }}px
+        20px
+        {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    #{{ section_id }} .wake-comparison__grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
 
     #{{ section_id }} .wake-comparison__heading {
-      font-size: clamp(28px, 9vw, 44px);
+      font-size: 34px;
+      line-height: 1.18;
+      margin-bottom: 12px;
     }
 
     #{{ section_id }} .wake-comparison__subtext {
-      margin-bottom: 28px;
       font-size: 16px;
+      line-height: 1.55;
+      margin-bottom: 28px;
+      max-width: 100%;
     }
 
     #{{ section_id }} .wake-comparison__features {
@@ -238,20 +257,38 @@
       margin-bottom: 28px;
     }
 
+    #{{ section_id }} .wake-comparison__feature {
+      gap: 14px;
+    }
+
+    #{{ section_id }} .wake-comparison__feature-icon {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+    }
+
     #{{ section_id }} .wake-comparison__feature-text {
       font-size: 16px;
+      line-height: 1.35;
     }
 
     #{{ section_id }} .wake-comparison__button {
       width: 100%;
       min-width: 0;
-      min-height: 60px;
-      font-size: 22px;
+      min-height: 58px;
+      padding: 16px 20px;
+      font-size: 18px;
+      line-height: 1.1;
     }
 
     #{{ section_id }} .wake-comparison__table {
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    #{{ section_id }} .wake-comparison__table-wrap {
       overflow-x: auto;
-      border-radius: 20px;
+      -webkit-overflow-scrolling: touch;
     }
 
     #{{ section_id }} .wake-comparison__table-scroll {
@@ -260,12 +297,22 @@
 
     #{{ section_id }} .wake-comparison__head > div,
     #{{ section_id }} .wake-comparison__row > div {
-      min-height: 68px;
-      padding: 14px 14px;
+      min-height: 64px;
+      padding: 12px 14px;
+    }
+
+    #{{ section_id }} .wake-comparison__head-label {
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    #{{ section_id }} .wake-comparison__label {
+      font-size: 15px;
+      line-height: 1.15;
     }
 
     #{{ section_id }} .wake-comparison__symbol {
-      font-size: 34px;
+      font-size: 30px;
     }
   }
 </style>
@@ -275,11 +322,14 @@
     <div class="wake-comparison__grid">
       <div class="wake-comparison__content">
         <h2 class="wake-comparison__heading">
-          <em>{{ section.settings.heading_prefix }}</em> <strong>{{ section.settings.heading_highlight }}</strong>
+          <em>{{ section.settings.heading_prefix }}</em>
+          <strong>{{ section.settings.heading_highlight }}</strong>
         </h2>
 
         {% if section.settings.subtext != blank %}
-          <div class="wake-comparison__subtext">{{ section.settings.subtext }}</div>
+          <div class="wake-comparison__subtext">
+            {{ section.settings.subtext }}
+          </div>
         {% endif %}
 
         {% if section.blocks.size > 0 %}
@@ -321,7 +371,9 @@
             {% for block in section.blocks %}
               {% if block.type == 'row' %}
                 <div class="wake-comparison__row" {{ block.shopify_attributes }}>
-                  <div class="wake-comparison__label">{{ block.settings.label }}</div>
+                  <div class="wake-comparison__label">
+                    {{ block.settings.label }}
+                  </div>
 
                   <div class="wake-comparison__cell wake-comparison__cell--highlight">
                     {% if block.settings.col_1_value == 'check' %}
@@ -408,7 +460,7 @@
       "max": 90,
       "step": 2,
       "unit": "px",
-      "label": "Taille titre",
+      "label": "Taille titre desktop",
       "default": 62
     },
     {
@@ -428,7 +480,7 @@
       "max": 28,
       "step": 1,
       "unit": "px",
-      "label": "Taille bénéfices",
+      "label": "Taille bénéfices desktop",
       "default": 21
     },
     {
@@ -458,7 +510,7 @@
       "max": 28,
       "step": 1,
       "unit": "px",
-      "label": "Taille labels tableau",
+      "label": "Taille libellés tableau",
       "default": 18
     },
     {
@@ -509,7 +561,7 @@
       "step": 4,
       "unit": "px",
       "label": "Marge haute mobile",
-      "default": 32
+      "default": 28
     },
     {
       "type": "range",
@@ -519,7 +571,7 @@
       "step": 4,
       "unit": "px",
       "label": "Marge basse mobile",
-      "default": 32
+      "default": 28
     },
     {
       "type": "color",
