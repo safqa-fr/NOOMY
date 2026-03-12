@@ -131,7 +131,7 @@
         "richtext_xLVXM9": {
           "type": "richtext",
           "settings": {
-            "content": "<h3><em>Why choose </em><strong>POPWATCH</strong>?</h3>"
+            "content": "<h2><em>Why choose </em><strong>POPWATCH</strong>?</h2>"
           }
         },
         "heading_gKyL8P": {
@@ -182,7 +182,7 @@
         "richtext_gFWHri": {
           "type": "richtext",
           "settings": {
-            "content": "<h3><em>Don't take our word for it.</em></h3>"
+            "content": "<h2><em>Don't take our word for it.</em></h2>"
           }
         },
         "heading_aQ6bFn": {
