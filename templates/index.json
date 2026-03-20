@@ -51,9 +51,9 @@
         "mobile_image": "shopify://shop_images/ChatGPT_Image_11_mars_2026_22_28_38.png",
         "mobile_text_position": "place-self-end-center text-center",
         "desktop_text_position": "sm:place-self-end-center sm:text-center",
-        "text_color": "#ffffff",
+        "text_color": "#000000",
         "overlay_color": "#000000",
-        "overlay_opacity": 30
+        "overlay_opacity": 10
       }
     },
     "logo_list_h49dDB": {
