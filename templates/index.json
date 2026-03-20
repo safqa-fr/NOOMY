@@ -53,7 +53,7 @@
         "desktop_text_position": "sm:place-self-end-center sm:text-center",
         "text_color": "#ffffff",
         "overlay_color": "#000000",
-        "overlay_opacity": 20
+        "overlay_opacity": 10
       }
     },
     "logo_list_h49dDB": {
